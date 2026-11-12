@@ -75,6 +75,8 @@ html {
   font-family: var(--tk-font-text);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 body {
@@ -1564,55 +1566,6 @@ a { color: inherit; }
 }
 
 /* ==========================================================================
-   Responsive Design (Mobile Portrait First-Class Composition)
-   ========================================================================== */
-@media (max-width: 1180px) {
-  .hero-prismatic-grid {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-  .hero-prismatic-info {
-    max-width: 680px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .hero-prismatic-info .stage-actions {
-    justify-content: center;
-  }
-  .prism-stage {
-    min-height: 400px;
-  }
-  .prism-stack {
-    transform: scale(0.92);
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 980px) {
-  .nav-links {
-    display: none;
-  }
-  .portfolio-workbench,
-  .lab-grid,
-  .closing-cta-box,
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
-  .capabilities-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .metrics-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .prism-stage {
-    height: 360px;
-  }
-  .prism-stack {
-    transform: scale(0.84);
-  }
-}
-
-/* ==========================================================================
    Métricas & Motion Design (Appe Designer / Impeccable)
    ========================================================================== */
 .metrics-strip {
@@ -1735,80 +1688,481 @@ body:hover .ambient-spotlight {
   transform: rotate(25deg) translateY(100%);
 }
 
+/* ==========================================================================
+   Responsive Design & Mobile Redesign Impeccable
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .hero-prismatic-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .hero-prismatic-info {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-prismatic-info .stage-actions {
+    justify-content: center;
+  }
+  .prism-stage {
+    min-height: 400px;
+  }
+  .prism-stack {
+    transform: scale(0.92);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+  }
+  .portfolio-workbench,
+  .lab-grid,
+  .closing-cta-box,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .capabilities-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prism-stage {
+    height: 360px;
+  }
+  .prism-stack {
+    transform: scale(0.84);
+  }
+}
+
+/* REDESIGN MOBILE IMPECCABLE (Smartphones & Telas Compactas) */
 @media (max-width: 640px) {
+  /* Cabeçalho Flutuante Compacto */
   .site-header {
-    top: 0.65rem;
-    padding: 0.5rem 0.75rem;
-    width: 94vw;
+    top: 0.5rem;
+    padding: 0.45rem 0.75rem;
+    width: 95vw;
+    border-radius: 999px;
+  }
+  .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
   }
   .brand-sub {
     display: none;
   }
+  .header-actions {
+    gap: 0.35rem;
+  }
   .header-actions .btn-sm {
-    padding: 0.45rem 0.8rem;
-    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.76rem;
+    min-height: 35px;
   }
   .theme-toggle {
-    padding: 0.45rem 0.7rem;
-    font-size: 0.76rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.74rem;
+    min-height: 35px;
   }
+
+  /* Palco de Vídeo Hero & Bandas de Legenda */
   .stage-band,
   .stage-band.band-right,
   .stage-band.band-center {
     left: 4vw;
     right: 4vw;
-    bottom: 8vh;
+    bottom: 7vh;
     transform: none;
     text-align: left;
     max-width: 92vw;
-    padding: 1.05rem 1.15rem;
+    padding: 1.15rem 1.2rem;
+    border-radius: 16px;
   }
   .stage-band h1 {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+    line-height: 1.1;
     margin-bottom: 0.35em;
   }
   .stage-band h2 {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
     margin-bottom: 0.35em;
   }
   .stage-band p {
-    font-size: 0.9rem;
-    line-height: 1.42;
+    font-size: 0.88rem;
+    line-height: 1.4;
     margin-bottom: 0.75em;
   }
   .stage-actions {
     margin-top: 0.85rem;
     gap: 0.55rem;
+    flex-direction: column;
   }
   .stage-actions .btn,
   .stage-actions .btn-secondary {
-    padding: 0.65rem 1.05rem;
-    font-size: 0.84rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.86rem;
   }
   .stage-band.band-center .stage-actions {
     justify-content: flex-start;
   }
   .stage-hud {
-    top: 4.8rem;
+    top: 4.6rem;
     left: 4vw;
     right: 4vw;
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     justify-content: center;
+    padding: 0.35rem 0.75rem;
   }
-  .capabilities-strip,
-  .inspector-columns {
-    grid-template-columns: 1fr;
+
+  /* Seções de Conteúdo */
+  .surface-section {
+    padding: 3.5rem 1.1rem;
+    overflow-x: clip;
+  }
+
+  /* Lâminas Prismáticas Hero 3D */
+  .hero-prismatic-grid {
+    gap: 2.2rem;
+  }
+  .hero-prismatic-info h2 {
+    font-size: clamp(1.75rem, 6.8vw, 2.25rem);
+    line-height: 1.15;
+  }
+  .hero-prismatic-info p {
+    font-size: 0.92rem;
+    line-height: 1.48;
   }
   .prism-stage {
-    height: 300px;
+    min-height: 380px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0;
+  }
+  .prism-slab {
+    width: 175px;
+    height: 275px;
+    left: calc(50% - 150px);
+    top: calc(50% - 138px);
+    padding: 1.15rem 1rem;
   }
   .prism-stack {
-    width: 300px;
-    transform: scale(0.62) translateX(-40px);
+    width: 320px;
+    max-width: 100%;
+    height: 295px;
+    transform: none;
+    margin: 0 auto;
   }
-  .surface-section {
-    padding: 3.5rem 4vw;
-    overflow-x: hidden;
+
+  .prism-stack[data-active="0"] .prism-slab:nth-child(1),
+  .prism-stack:not([data-active]) .prism-slab:nth-child(1) {
+    transform: translateX(0px) translateY(-10px) scale(1.03) translateZ(40px);
+    z-index: 40;
+  }
+  .prism-stack[data-active="0"] .prism-slab:nth-child(2),
+  .prism-stack:not([data-active]) .prism-slab:nth-child(2) {
+    transform: translateX(42px) translateY(4px) scale(0.96) rotateY(8deg) translateZ(10px);
+    z-index: 30;
+  }
+  .prism-stack[data-active="0"] .prism-slab:nth-child(3),
+  .prism-stack:not([data-active]) .prism-slab:nth-child(3) {
+    transform: translateX(84px) translateY(12px) scale(0.92) rotateY(12deg) translateZ(-15px);
+    z-index: 20;
+  }
+  .prism-stack[data-active="0"] .prism-slab:nth-child(4),
+  .prism-stack:not([data-active]) .prism-slab:nth-child(4) {
+    transform: translateX(126px) translateY(18px) scale(0.88) rotateY(16deg) translateZ(-40px);
+    z-index: 10;
+  }
+
+  .prism-stack[data-active="1"] .prism-slab:nth-child(1) {
+    transform: translateX(0px) translateY(6px) scale(0.94) rotateY(-8deg) translateZ(5px);
+    z-index: 20;
+  }
+  .prism-stack[data-active="1"] .prism-slab:nth-child(2) {
+    transform: translateX(42px) translateY(-10px) scale(1.03) translateZ(40px);
+    z-index: 40;
+  }
+  .prism-stack[data-active="1"] .prism-slab:nth-child(3) {
+    transform: translateX(84px) translateY(4px) scale(0.96) rotateY(8deg) translateZ(10px);
+    z-index: 30;
+  }
+  .prism-stack[data-active="1"] .prism-slab:nth-child(4) {
+    transform: translateX(126px) translateY(12px) scale(0.92) rotateY(12deg) translateZ(-15px);
+    z-index: 10;
+  }
+
+  .prism-stack[data-active="2"] .prism-slab:nth-child(1) {
+    transform: translateX(0px) translateY(12px) scale(0.90) rotateY(-12deg) translateZ(-15px);
+    z-index: 10;
+  }
+  .prism-stack[data-active="2"] .prism-slab:nth-child(2) {
+    transform: translateX(42px) translateY(6px) scale(0.94) rotateY(-8deg) translateZ(5px);
+    z-index: 20;
+  }
+  .prism-stack[data-active="2"] .prism-slab:nth-child(3) {
+    transform: translateX(84px) translateY(-10px) scale(1.03) translateZ(40px);
+    z-index: 40;
+  }
+  .prism-stack[data-active="2"] .prism-slab:nth-child(4) {
+    transform: translateX(126px) translateY(4px) scale(0.96) rotateY(8deg) translateZ(10px);
+    z-index: 30;
+  }
+
+  .prism-stack[data-active="3"] .prism-slab:nth-child(1) {
+    transform: translateX(0px) translateY(18px) scale(0.88) rotateY(-16deg) translateZ(-40px);
+    z-index: 10;
+  }
+  .prism-stack[data-active="3"] .prism-slab:nth-child(2) {
+    transform: translateX(42px) translateY(12px) scale(0.90) rotateY(-12deg) translateZ(-15px);
+    z-index: 20;
+  }
+  .prism-stack[data-active="3"] .prism-slab:nth-child(3) {
+    transform: translateX(84px) translateY(6px) scale(0.94) rotateY(-8deg) translateZ(5px);
+    z-index: 30;
+  }
+  .prism-stack[data-active="3"] .prism-slab:nth-child(4) {
+    transform: translateX(126px) translateY(-10px) scale(1.03) translateZ(40px);
+    z-index: 40;
+  }
+
+  .prism-pills {
+    margin-top: 0.5rem;
+    gap: 0.35rem;
+  }
+  .prism-pill {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.68rem;
+  }
+
+  /* 4 Pilares de Engenharia / CNAEs */
+  .capabilities-strip {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .cap-card-container {
+    height: 380px;
+  }
+  .cap-face {
+    padding: 1.35rem 1.2rem;
+  }
+  .cap-front h3 {
+    font-size: 1.15rem;
+  }
+  .cap-front p {
+    font-size: 0.85rem;
+  }
+
+  /* Faixa de Métricas Institucionais */
+  .metrics-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-top: 2.2rem;
+  }
+  .metric-card {
+    padding: 1.2rem 0.85rem;
+    border-radius: 14px;
+  }
+  .metric-val {
+    font-size: 1.75rem;
+  }
+  .metric-lbl {
+    font-size: 0.65rem;
+  }
+
+  /* Títulos de Seção */
+  .portfolio-header h2,
+  .closing-cta-box h2,
+  .scrubber-lab h2 {
+    font-size: clamp(1.75rem, 6.8vw, 2.25rem);
+    line-height: 1.15;
+  }
+
+  /* Carrossel 3D Orbital de Luas */
+  .portfolio-orbit-showcase {
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+  .portfolio-orbit-showcase [data-efeito="carrossel-3d"] {
+    transform: scale(0.68) translateY(-15px);
+    transform-origin: center center;
+  }
+  .orbit-hint {
+    font-size: 0.72rem;
+    padding: 0 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  /* Barra de Filtros em Carrossel Horizontal Deslizável */
+  .filter-bar {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.65rem;
+    scrollbar-width: none;
+    gap: 0.45rem;
+  }
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.45rem 0.95rem;
+    min-height: 38px;
+    font-size: 0.8rem;
+  }
+
+  /* Bancada de Portfólio (Lista em Carrossel Horizontal + Inspetor Imediato Abaixo) */
+  .portfolio-workbench {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .project-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    scrollbar-width: none;
+  }
+  .project-list::-webkit-scrollbar {
+    display: none;
+  }
+  .project-tab {
+    flex: 0 0 250px;
+    width: 250px;
+    padding: 0.95rem 1.05rem;
+    border-radius: 14px;
+  }
+  .tab-name {
+    font-size: 1.02rem;
+  }
+  .tab-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+
+  /* Inspetor Técnico do Software Selecionado */
+  .project-inspector {
+    border-radius: 18px;
+  }
+  .inspector-visual {
+    min-height: 210px;
+    padding: 1rem;
+  }
+  .inspector-visual img {
+    max-height: 180px;
+  }
+  .inspector-details {
+    padding: 1.25rem 1.15rem;
+  }
+  .inspector-header h3 {
+    font-size: 1.35rem;
+  }
+  .inspector-meta {
+    gap: 0.4rem;
+  }
+  .inspector-actions {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .inspector-actions .btn,
+  .inspector-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Laboratório Interativo de Vídeo */
+  .scrubber-lab {
+    padding: 1.6rem 1.15rem;
+    border-radius: 20px;
+  }
+  .video-stage-frame {
+    border-radius: 14px;
+  }
+  .scrubber-bar-row {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+  .scrubber-range {
+    width: 100%;
+    order: 3;
+  }
+  #playPauseBtn {
+    font-size: 0.74rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  /* Seção de Contato e Fechamento */
+  .closing-cta-box {
+    padding: 2rem 1.25rem;
+    border-radius: 20px;
+  }
+  .contact-cards {
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+  }
+  .contact-item {
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+  }
+  .contact-label {
+    font-size: 0.64rem;
+  }
+  .contact-value {
+    font-size: 0.88rem;
+  }
+
+  /* Modal de Demonstração em Tela Cheia */
+  .demo-modal {
+    width: 94vw;
+    max-width: 94vw;
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+}
+
+/* Telas Ultra-Compactas (ex: iPhone SE / 360px a 375px) */
+@media (max-width: 380px) {
+  .site-header {
+    width: 96vw;
+    padding: 0.4rem 0.6rem;
+  }
+  .header-actions .btn-sm {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.72rem;
+  }
+  .theme-toggle {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.7rem;
+  }
+  .metrics-strip {
+    grid-template-columns: 1fr;
+  }
+  .prism-stack {
+    transform: scale(0.72);
+  }
+  .portfolio-orbit-showcase [data-efeito="carrossel-3d"] {
+    transform: scale(0.60) translateY(-10px);
   }
 }
 
