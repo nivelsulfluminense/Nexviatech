@@ -1,0 +1,8 @@
+{
+  "name": "nexviatech",
+  "version": "1.0.0",
+  "description": "Nexvia Tech - Engenharia de Software e Plataforma Digital",
+  "scripts": {
+    "build": ""
+  }
+}
