@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 256" width="880" height="256" role="img" aria-labelledby="title">
+  <title id="title">Nexvia Tech — Concept A Lockup</title>
+  <g id="symbol">
+    <path fill="#111111" d="M 32 52 A 20 20 0 0 1 52 32 H 84 L 152 168 V 224 H 116 L 80 152 V 204 A 20 20 0 0 1 60 224 H 52 A 20 20 0 0 1 32 204 V 52 Z M 176 32 H 204 A 20 20 0 0 1 224 52 V 204 A 20 20 0 0 1 204 224 H 176 V 32 Z"/>
+  </g>
+  <g id="wordmark">
+    <text x="272" y="148" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="92" font-weight="800" letter-spacing="-2" fill="#111111">NEXVIA</text>
+    <text x="276" y="198" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="600" letter-spacing="14" fill="#555555">TECH</text>
+  </g>
+</svg>
+

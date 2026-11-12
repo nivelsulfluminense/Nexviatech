@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style Tile · Nexvia Tech (Light & Dark System)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="dark"] {
+      --tk-canvas: #070913;
+      --tk-surface: #0E1324;
+      --tk-surface-elevated: rgba(20, 27, 48, 0.72);
+      --tk-border: rgba(116, 138, 255, 0.18);
+      --tk-ink: #F4F7FF;
+      --tk-ink-soft: #9BA6C7;
+      --tk-accent: #5E43F3;
+      --tk-accent-secondary: #2563EB;
+      --tk-accent-glow: rgba(94, 67, 243, 0.42);
+      --tk-accent-ink: #FFFFFF;
+      --tk-font-display: "Archivo", system-ui, sans-serif;
+      --tk-font-text: "Plus Jakarta Sans", system-ui, sans-serif;
+      --tk-font-mono: "JetBrains Mono", monospace;
+    }
+    [data-theme="light"] {
+      --tk-canvas: #F4F7FF;
+      --tk-surface: #FFFFFF;
+      --tk-surface-elevated: rgba(255, 255, 255, 0.82);
+      --tk-border: rgba(37, 99, 235, 0.16);
+      --tk-ink: #0B1021;
+      --tk-ink-soft: #4A5578;
+      --tk-accent: #2563EB;
+      --tk-accent-secondary: #6D4AFF;
+      --tk-accent-glow: rgba(37, 99, 235, 0.24);
+      --tk-accent-ink: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 3rem 5vw;
+      background: var(--tk-canvas);
+      color: var(--tk-ink);
+      font-family: var(--tk-font-text);
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--tk-border);
+      margin-bottom: 3rem;
+    }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-family: var(--tk-font-display); font-weight: 800; font-size: 1.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    .card {
+      background: var(--tk-surface);
+      border: 1px solid var(--tk-border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 50px -20px var(--tk-accent-glow);
+    }
+    .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .swatch { border-radius: 12px; padding: 1rem; height: 96px; display: flex; flex-direction: column; justify-content: flex-end; font-family: var(--tk-font-mono); font-size: 0.75rem; border: 1px solid var(--tk-border); }
+    h1 { font-family: var(--tk-font-display); font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
+    h2 { font-family: var(--tk-font-display); font-size: clamp(1.6rem, 3vw, 2.5rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+    p { color: var(--tk-ink-soft); line-height: 1.6; max-width: 60ch; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 1.6rem; border-radius: 999px;
+      background: var(--tk-accent); color: var(--tk-accent-ink);
+      font-weight: 600; text-decoration: none; border: none; cursor: pointer;
+      box-shadow: 0 10px 28px -6px var(--tk-accent-glow);
+    }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 1.6rem; border-radius: 999px;
+      background: transparent; color: var(--tk-ink);
+      border: 1px solid var(--tk-border); font-weight: 600; text-decoration: none; cursor: pointer;
+    }
+    .btn:focus-visible, .btn-ghost:focus-visible { outline: 3px solid var(--tk-accent); outline-offset: 3px; }
+    .scrim-demo {
+      position: relative; border-radius: 18px; overflow: hidden; min-height: 280px;
+      background: url("../site/film/poster.webp") center/cover no-repeat;
+      display: flex; align-items: flex-end; padding: 2rem;
+    }
+    .scrim-box {
+      background: rgba(7, 9, 19, 0.82); backdrop-filter: blur(14px);
+      border: 1px solid rgba(116, 138, 255, 0.28);
+      color: #F4F7FF; padding: 1.5rem 2rem; border-radius: 14px; max-width: 34rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <svg width="36" height="36" viewBox="0 0 256 256" fill="currentColor">
+        <path d="M 32 52 A 20 20 0 0 1 52 32 H 84 L 152 168 V 224 H 116 L 80 152 V 204 A 20 20 0 0 1 60 224 H 52 A 20 20 0 0 1 32 204 V 52 Z M 176 32 H 204 A 20 20 0 0 1 224 52 V 204 A 20 20 0 0 1 204 224 H 176 V 32 Z"/>
+      </svg>
+      <span>NEXVIA TECH · STYLE TILE</span>
+    </div>
+    <button class="btn-ghost" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'">
+      Alternar Tema (Claro / Escuro)
+    </button>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Paleta Dual-Theme (Azul & Roxo)</h2>
+      <p>Tokens extraídos das duas referências visuais (Nexora Light & WebNova Dark).</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#070913;color:#fff"><span>#070913</span><strong>Obsidian</strong></div>
+        <div class="swatch" style="background:#F4F7FF;color:#0B1021"><span>#F4F7FF</span><strong>Ice Slate</strong></div>
+        <div class="swatch" style="background:#5E43F3;color:#fff"><span>#5E43F3</span><strong>Nexvia Violet</strong></div>
+        <div class="swatch" style="background:#2563EB;color:#fff"><span>#2563EB</span><strong>Cobalt Blue</strong></div>
+        <div class="swatch" style="background:#141B30;color:#fff"><span>#141B30</span><strong>Deep Surface</strong></div>
+        <div class="swatch" style="background:#38BDF8;color:#070913"><span>#38BDF8</span><strong>Holo Cyan</strong></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Software que move mercados.</h1>
+      <h2>Uma arquitetura. Todas as telas.</h2>
+      <p>Par tipográfico: <strong>Archivo</strong> (Display Geométrico Técnico) + <strong>Plus Jakarta Sans</strong> (Leitura de Alta Nitidez) + <strong>JetBrains Mono</strong> (Metadados de Engenharia).</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="#acao" class="btn">Iniciar Projeto →</a>
+        <a href="#portfolio" class="btn-ghost">Explorar Portfólio (6)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scrim-demo">
+    <div class="scrim-box">
+      <h2 style="color:#F4F7FF;margin-top:0">Contraste Verificado sobre o Palco Holográfico</h2>
+      <p style="color:#CBD5E1;margin-bottom:0">Scrim localizado com desfoque óptico garantindo razão de contraste &gt; 8.5:1 sobre os quadros em movimento do vídeo.</p>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Nexvia Tech — Concept A (Nexus Bridge)</title>
+  <path fill="#111111" d="M 32 52 A 20 20 0 0 1 52 32 H 84 L 152 168 V 224 H 116 L 80 152 V 204 A 20 20 0 0 1 60 224 H 52 A 20 20 0 0 1 32 204 V 52 Z M 176 32 H 204 A 20 20 0 0 1 224 52 V 204 A 20 20 0 0 1 204 224 H 176 V 32 Z"/>
+</svg>

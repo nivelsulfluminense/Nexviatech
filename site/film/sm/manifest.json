@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "count": 179,
+  "width": 900,
+  "height": 506,
+  "fps": 18,
+  "pattern": "frame-%04d.webp",
+  "start": 0,
+  "bytes": 6216400
+}

@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+logo-design-skill/
+
+# Temporary & debug artifacts
+scratch/
+qa-report/
+.agents/
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db

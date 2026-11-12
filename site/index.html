@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexvia Tech · Engenharia de Software, Aplicativos &amp; Ecossistemas B2B e B2C</title>
+  <meta name="description" content="Nexvia Tecnologia Ltda (Nexvia Tech) — Desenvolvimento de aplicativos, web apps, plataformas B2B/B2C e softwares para PC nas áreas de saúde, ciência, educação, entretenimento, esporte e tecnologia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./tk-stage.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./efeitos/borda.js" defer></script>
+  <script src="./efeitos/carrossel-3d.js" defer></script>
+  <script src="./efeitos/motion-design.js" defer></script>
+</head>
+<body>
+  <!-- Floating Glass Header -->
+  <header class="site-header" role="banner">
+    <a href="#hero" class="brand-link" aria-label="Nexvia Tech Início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 256 256">
+          <path d="M 32 48 L 80 32 V 208 L 32 224 Z M 96 48 L 160 128 V 208 L 96 128 Z M 176 48 L 224 32 V 208 L 176 224 Z"/>
+        </svg>
+      </span>
+      <span>NEXVIA<span class="brand-sub">TECH</span></span>
+    </a>
+
+    <nav aria-label="Navegação Principal">
+      <ul class="nav-links">
+        <li><a href="#arquitetura">Soluções B2B &amp; B2C</a></li>
+        <li><a href="#portfolio">Portfólio (9)</a></li>
+        <li><a href="#laboratorio">Experiência Touch/Scroll</a></li>
+        <li><a href="#contato">Empresa &amp; Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+        <svg id="themeIconDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+        <span id="themeLabel">Tema Claro</span>
+      </button>
+      <a href="#contato" class="btn btn-sm">Iniciar Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         ATO 1: PALCO CINEMATOGRÁFICO GUIADO POR SCROLL (tk-stage)
+         ==================================================================== -->
+    <section data-tk-stage id="hero" aria-label="Interface holográfica interativa controlada pelo scroll" style="--tk-span: 650vh; --tk-span-mobile: 520vh">
+      <div data-tk-pin>
+        <canvas data-tk-canvas aria-hidden="true"></canvas>
+        <img data-tk-poster src="./film/poster.webp" alt="Projeção holográfica global da arquitetura de sistemas Nexvia Tech" width="1600" height="900" fetchpriority="high">
+
+        <div class="stage-hud" aria-hidden="true">
+          <span class="hud-dot"></span>
+          <span id="stageHudText">SCROLL / TOUCH TIMELINE · QUADRO 001 / 179</span>
+        </div>
+
+        <!-- Cena 01: Abertura -->
+        <div class="stage-band" data-tk-band="0 0.28 0 0.08">
+          <div class="pillar-pills">
+            <span class="pillar-pill">WEB APPS</span>
+            <span class="pillar-pill">MOBILE iOS &amp; ANDROID</span>
+            <span class="pillar-pill">PC DESKTOP</span>
+            <span class="pillar-pill">B2B &amp; B2C</span>
+          </div>
+          <h1>Software que move mercados. Aplicativos que encantam pessoas.</h1>
+          <p>Na Nexvia Tech, projetamos ecossistemas digitais completos para empresas (B2B) e consumidores finais (B2C) — unindo engenharia de alto desempenho em saúde, ciência, educação, entretenimento e esporte.</p>
+          <div class="stage-actions">
+            <a href="#contato" class="btn">Iniciar Projeto →</a>
+            <a href="#portfolio" class="btn-secondary">Explorar Portfólio Real (9)</a>
+          </div>
+        </div>
+
+        <!-- Cena 02: Pausa Intermediária -->
+        <div class="stage-band band-right" data-tk-band="0.33 0.64">
+          <div class="pillar-pills">
+            <span class="pillar-pill">SAÚDE &amp; BIOTECH</span>
+            <span class="pillar-pill">CIÊNCIA &amp; IA</span>
+            <span class="pillar-pill">ENTRETENIMENTO &amp; ESPORTE</span>
+          </div>
+          <h2>Do núcleo científico à interface que cabe na palma da mão.</h2>
+          <p>Nossa arquitetura integra motores matemáticos, processamento neural em GPU e interfaces reativas que operam com fluidez no navegador, no celular ou nativamente no computador.</p>
+        </div>
+
+        <!-- Cena 03: Resolução do Palco -->
+        <div class="stage-band band-center" data-tk-band="0.72 1 0.08 0">
+          <h2>Engenharia pronta para escalar sua próxima ideia.</h2>
+          <p>Desenvolvimento sob encomenda, plataformas licenciáveis e consultoria especializada em Tecnologia da Informação.</p>
+          <div class="stage-actions">
+            <a href="#portfolio" class="btn">Ver Sistemas Construídos</a>
+            <a href="#contato" class="btn-secondary">Falar com a Engenharia</a>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ====================================================================
+         ATO 2: ARQUITETURA PRISMÁTICA & CAPACIDADES B2B / B2C
+         (Inspirado diretamente nas referências enviadas: Nexora Light & WebNova Dark)
+         ==================================================================== -->
+    <section class="surface-section" id="arquitetura">
+      <div class="hero-prismatic-grid">
+        <div class="hero-prismatic-info">
+          <h2>Ferramentas inteligentes para <span class="accent-word">progresso real</span> em qualquer plataforma.</h2>
+          <p>Atuamos em duas frentes complementares: construímos <strong>infraestrutura e sistemas sob medida para organizações (B2B)</strong> e lançamos <strong>aplicativos diretos ao consumidor (B2C)</strong> com retenção, velocidade e acabamento visual impecável.</p>
+          <p>Passe o cursor ou toque nas lâminas translúcidas ao lado para inspecionar nossas camadas de entrega, ou alterne entre o <strong>Tema Claro</strong> e o <strong>Tema Escuro</strong> no topo da página.</p>
+          <div class="stage-actions">
+            <a href="#contato" class="btn">Iniciar Projeto →</a>
+            <a href="#portfolio" class="btn-secondary">Inspecionar os 9 Softwares</a>
+          </div>
+        </div>
+
+        <!-- 3D Prismatic Glass Stack (Fanned Deck Anti-Colisão & Totalmente Acessível) -->
+        <div class="prism-stage" id="prismStage" aria-label="Camadas de arquitetura em perspectiva 3D">
+          <div class="prism-glow-orb"></div>
+          <div class="prism-stack" id="prismStack" data-active="0">
+            <article class="prism-slab is-active" data-slab="0" data-efeito="borda" style="--borda-tempo: 10s;" tabindex="0" role="button" aria-label="Selecionar camada Mobile & PWA">
+              <span class="slab-badge">01 · MOBILE &amp; PWA</span>
+              <div>
+                <h3 class="slab-title">Apps B2C &amp; B2B</h3>
+                <p class="slab-desc">Experiências táteis para iOS, Android e Web com sincronização offline-first e alta retenção.</p>
+              </div>
+            </article>
+            <article class="prism-slab" data-slab="1" data-efeito="borda" style="--borda-tempo: 11.2s;" tabindex="0" role="button" aria-label="Selecionar camada Web Cloud">
+              <span class="slab-badge">02 · WEB CLOUD</span>
+              <div>
+                <h3 class="slab-title">Plataformas SaaS</h3>
+                <p class="slab-desc">Sistemas web e portais em nuvem com alta capacidade operacional, segurança robusta e disponibilidade contínua.</p>
+              </div>
+            </article>
+            <article class="prism-slab" data-slab="2" data-efeito="borda" style="--borda-tempo: 12.4s;" tabindex="0" role="button" aria-label="Selecionar camada Desktop PC">
+              <span class="slab-badge">03 · DESKTOP PC</span>
+              <div>
+                <h3 class="slab-title">Software Nativo</h3>
+                <p class="slab-desc">Aplicações desktop nativas com processamento gráfico acelerado, motores de cálculo e resposta imediata.</p>
+              </div>
+            </article>
+            <article class="prism-slab" data-slab="3" data-efeito="borda" style="--borda-tempo: 10.8s;" tabindex="0" role="button" aria-label="Selecionar camada Inteligência Aplicada">
+              <span class="slab-badge">04 · IA &amp; DADOS</span>
+              <div>
+                <h3 class="slab-title">Inteligência Aplicada</h3>
+                <p class="slab-desc">Inteligência artificial aplicada a áudio, automações complexas e análise preditiva sem alucinação.</p>
+              </div>
+            </article>
+          </div>
+          <!-- Seletor em pílulas para acesso garantido com 1 clique a qualquer camada -->
+          <div class="prism-pills" role="tablist" aria-label="Camadas de arquitetura da Nexvia Tech">
+            <button type="button" class="prism-pill is-active" data-slab-pill="0">01 · Mobile &amp; PWA</button>
+            <button type="button" class="prism-pill" data-slab-pill="1">02 · Web Cloud</button>
+            <button type="button" class="prism-pill" data-slab-pill="2">03 · Desktop PC</button>
+            <button type="button" class="prism-pill" data-slab-pill="3">04 · IA &amp; Dados</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Pilares Oficiais: 3D Tilt + 3D Flip Card (CNAEs da Nexvia Tecnologia Ltda) -->
+      <div class="capabilities-strip">
+        <!-- Card 1: Sistemas Exclusivos B2B -->
+        <div class="cap-card-container" data-tilt="true" tabindex="0" role="button" aria-label="Girar cartão Sistemas Exclusivos B2B">
+          <article class="cap-card-inner" data-efeito="borda" style="--borda-tempo: 11s;">
+            <div class="cap-face cap-front">
+              <div>
+                <div class="cap-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <span class="cap-code">CNAE 62.01-5-01 · SOB ENCOMENDA</span>
+                <h3>Sistemas Exclusivos B2B</h3>
+                <p>Desenvolvimento de programas de computador sob medida para regras de negócio críticas, integrações e fluxos proprietários.</p>
+              </div>
+              <div class="cap-flip-hint">
+                <span>Clique para Entregáveis</span>
+                <svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+            <div class="cap-face cap-back">
+              <div>
+                <span class="cap-code">GARANTIAS &amp; ENTREGÁVEIS</span>
+                <h4>Engenharia Dedicada Sob Medida</h4>
+                <ul class="cap-back-list">
+                  <li>Propriedade intelectual 100% transferida ao cliente contratante.</li>
+                  <li>Código-fonte auditado, documentação executiva e conformidade LGPD.</li>
+                  <li>Emissão de Nota Fiscal de Serviços com CNAE oficial de desenvolvimento.</li>
+                  <li>SLA de sustentação contínua e suporte direto com os engenheiros.</li>
+                </ul>
+              </div>
+              <a href="mailto:admin@nexviatec.com?subject=Proposta%20Sistemas%20Exclusivos%20B2B" class="btn btn-sm">Solicitar Proposta B2B →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2: Produtos & Licenciamento SaaS -->
+        <div class="cap-card-container" data-tilt="true" tabindex="0" role="button" aria-label="Girar cartão Produtos e Licenciamento SaaS">
+          <article class="cap-card-inner" data-efeito="borda" style="--borda-tempo: 12.5s;">
+            <div class="cap-face cap-front">
+              <div>
+                <div class="cap-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <span class="cap-code">CNAE 62.02-3-00 &amp; 62.03-1-00</span>
+                <h3>Produtos &amp; Licenciamento SaaS</h3>
+                <p>Criação e licenciamento de plataformas customizáveis e produtos prontos para escala comercial B2C e B2B.</p>
+              </div>
+              <div class="cap-flip-hint">
+                <span>Clique para Entregáveis</span>
+                <svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+            <div class="cap-face cap-back">
+              <div>
+                <span class="cap-code">LICENCIAMENTO ÁGIL</span>
+                <h4>Plataformas Prontas para Operar</h4>
+                <ul class="cap-back-list">
+                  <li>Plataformas pré-validadas prontas para customização White-label.</li>
+                  <li>Redução drástica do time-to-market de novos produtos digitais.</li>
+                  <li>Infraestrutura escalável em nuvem com isolamento rigoroso de contas.</li>
+                  <li>Modelos flexíveis de licenciamento por usuário, volume ou perpétuo.</li>
+                </ul>
+              </div>
+              <a href="mailto:admin@nexviatec.com?subject=Licenciamento%20de%20Software%20SaaS" class="btn btn-sm">Conversar sobre Licenciamento →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3: Arquitetura & IA Aplicada -->
+        <div class="cap-card-container" data-tilt="true" tabindex="0" role="button" aria-label="Girar cartão Arquitetura e IA Aplicada">
+          <article class="cap-card-inner" data-efeito="borda" style="--borda-tempo: 10.5s;">
+            <div class="cap-face cap-front">
+              <div>
+                <div class="cap-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <span class="cap-code">CNAE 62.04-0-00 · CONSULTORIA TI</span>
+                <h3>Arquitetura &amp; IA Aplicada</h3>
+                <p>Consultoria estratégica em tecnologia da informação, modernização de sistemas, pipelines de dados e modelos de IA sem alucinação.</p>
+              </div>
+              <div class="cap-flip-hint">
+                <span>Clique para Entregáveis</span>
+                <svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+            <div class="cap-face cap-back">
+              <div>
+                <span class="cap-code">CONFIANÇA &amp; PERFORMANCE</span>
+                <h4>Engenharia de Alto Desempenho</h4>
+                <ul class="cap-back-list">
+                  <li>Auditoria de código, arquitetura distribuída e conformidade LGPD.</li>
+                  <li>Soluções de Inteligência Artificial com citação de fontes auditadas.</li>
+                  <li>Modernização de sistemas legados para máxima velocidade de resposta.</li>
+                  <li>Planejamento de capacidade com redução de custos de nuvem.</li>
+                </ul>
+              </div>
+              <a href="mailto:admin@nexviatec.com?subject=Consultoria%20em%20Arquitetura%20e%20IA" class="btn btn-sm">Agendar Consultoria TI →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4: Sustentação & Evolução -->
+        <div class="cap-card-container" data-tilt="true" tabindex="0" role="button" aria-label="Girar cartão Sustentação e Evolução">
+          <article class="cap-card-inner" data-efeito="borda" style="--borda-tempo: 13s;">
+            <div class="cap-face cap-front">
+              <div>
+                <div class="cap-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="cap-code">CNAE 62.09-1-00 · SUPORTE &amp; OPS</span>
+                <h3>Sustentação &amp; Evolução</h3>
+                <p>Suporte técnico especializado, manutenção evolutiva, conformidade LGPD e observabilidade contínua em produção.</p>
+              </div>
+              <div class="cap-flip-hint">
+                <span>Clique para Entregáveis</span>
+                <svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+            <div class="cap-face cap-back">
+              <div>
+                <span class="cap-code">DISPONIBILIDADE 24/7</span>
+                <h4>Continuidade de Operações</h4>
+                <ul class="cap-back-list">
+                  <li>Monitoramento contínuo de integridade com resposta imediata.</li>
+                  <li>Atualizações preventivas de segurança, patches e conformidade.</li>
+                  <li>SLAs transparentes de resolução formalizados em contrato.</li>
+                  <li>Evolução contínua de novas funcionalidades alinhadas ao mercado.</li>
+                </ul>
+              </div>
+              <a href="mailto:admin@nexviatec.com?subject=Contrato%20de%20Sustenta%C3%A7%C3%A3o%20e%20Suporte" class="btn btn-sm">Contratar Sustentação →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Métricas Oficiais e Credibilidade de Engenharia (Inspiradas em Nexora e WebNova) -->
+      <div class="metrics-strip">
+        <div class="metric-card">
+          <div class="metric-val"><span data-count-target="9" data-count-suffix="">0</span></div>
+          <div class="metric-lbl">Softwares em Produção</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val"><span data-count-target="99.9" data-count-decimals="1" data-count-suffix="%">0</span></div>
+          <div class="metric-lbl">Disponibilidade e Uptime</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val"><span data-count-target="100" data-count-suffix="%">0</span></div>
+          <div class="metric-lbl">Propriedade Intelectual Transferida</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val"><span data-count-target="24" data-count-suffix="/7">0</span></div>
+          <div class="metric-lbl">Sustentação &amp; Suporte Contínuo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ATO 3 (O PICO): PORTFÓLIO INTERATIVO DE 6 PRODUTOS REAIS
+         ==================================================================== -->
+    <section class="surface-section" id="portfolio">
+      <div class="portfolio-header">
+        <div>
+          <h2>Portfólio em Produção: <span class="accent-word">9 Softwares &amp; Plataformas Reais</span></h2>
+          <p>Explore as soluções projetadas e desenvolvidas pela Nexvia Tech. Selecione uma área de atuação ou clique em qualquer projeto para inspecionar sua arquitetura técnica, telas, stack e links em produção.</p>
+        </div>
+      </div>
+
+      <!-- Barra de Filtros por Vertical -->
+      <div class="filter-bar" role="tablist" aria-label="Filtrar projetos por área">
+        <button type="button" class="filter-btn is-active" data-filter="all">Todos os Projetos (9)</button>
+        <button type="button" class="filter-btn" data-filter="esporte">Esporte &amp; Mídia</button>
+        <button type="button" class="filter-btn" data-filter="industrial">Indústria &amp; B2B</button>
+        <button type="button" class="filter-btn" data-filter="ambiental">Cidadania &amp; Meio Ambiente</button>
+        <button type="button" class="filter-btn" data-filter="saude">Saúde &amp; Biotecnologia</button>
+        <button type="button" class="filter-btn" data-filter="entretenimento">Entretenimento &amp; Áudio IA</button>
+        <button type="button" class="filter-btn" data-filter="ciencia">Ciência &amp; Simulação PC</button>
+        <button type="button" class="filter-btn" data-filter="educacao">Educação &amp; Matemática</button>
+        <button type="button" class="filter-btn" data-filter="tecnologia">Tecnologia &amp; DevTools</button>
+      </div>
+
+      <!-- Carrossel 3D Orbital (9 Luas Orbitando o Planeta Nexvia Tech) -->
+      <div class="portfolio-orbit-showcase" aria-label="Visualização Orbital 3D dos Projetos da Nexvia Tech">
+        <div data-efeito="carrossel-3d" data-velocidade="0.75" data-inclinacao="-9" data-folga="26">
+          <!-- Núcleo Planetário Central com a Marca Oficial da Nexvia Tech -->
+          <div class="c3d-centro planeta-core" aria-label="Nexvia Tech - Núcleo Planetário">
+            <div class="planeta-orb-glow"></div>
+            <div class="planeta-shield">
+              <svg viewBox="0 0 256 256" class="planeta-logo-svg" aria-hidden="true">
+                <path d="M 32 48 L 80 32 V 208 L 32 224 Z M 96 48 L 160 128 V 208 L 96 128 Z M 176 48 L 224 32 V 208 L 176 224 Z"/>
+              </svg>
+            </div>
+            <span class="planeta-label">NEXVIA TECH</span>
+          </div>
+
+          <!-- 9 Luas Orbitais com Efeito de Contorno Feixe de Luz (borda.js) -->
+          <article class="cartao moon-card" data-efeito="borda" data-project="amafut" style="--borda-tempo: 10.2s;" tabindex="0" role="button" aria-label="Selecionar AmaFut Blog">
+            <span class="moon-badge">ESPORTE &amp; MÍDIA</span>
+            <h4 class="moon-title">AmaFut Blog</h4>
+            <p class="moon-summary">Portal esportivo e notícias de futebol com gestão de torneios e quadras parceiras.</p>
+            <div class="moon-foot"><span>Ao Vivo Online</span> <span>↗</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="anmocar" style="--borda-tempo: 11.5s;" tabindex="0" role="button" aria-label="Selecionar ANMOCAR-BR">
+            <span class="moon-badge">MEIO AMBIENTE</span>
+            <h4 class="moon-title">ANMOCAR-BR</h4>
+            <p class="moon-summary">Portal oficial de cidadania viária e logística reversa automotiva nacional.</p>
+            <div class="moon-foot"><span>Ao Vivo Online</span> <span>↗</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="alprint" style="--borda-tempo: 12.4s;" tabindex="0" role="button" aria-label="Selecionar Alprint">
+            <span class="moon-badge">INDÚSTRIA B2B</span>
+            <h4 class="moon-title">Alprint</h4>
+            <p class="moon-summary">Catálogo digital e soluções industriais de alumínio e embalagens de alta precisão.</p>
+            <div class="moon-foot"><span>Ao Vivo Online</span> <span>↗</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="hipica" style="--borda-tempo: 9.8s;" tabindex="0" role="button" aria-label="Selecionar A Ilusão da Aposta">
+            <span class="moon-badge">EDUCAÇÃO &amp; ODDS</span>
+            <h4 class="moon-title">A Ilusão da Aposta</h4>
+            <p class="moon-summary">Simulador educativo que desmistifica probabilidades e cálculos em corridas dinâmicas.</p>
+            <div class="moon-foot"><span>Ao Vivo Online</span> <span>↗</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="veridose" style="--borda-tempo: 13.2s;" tabindex="0" role="button" aria-label="Selecionar Veridose">
+            <span class="moon-badge">SAÚDE &amp; CLÍNICA</span>
+            <h4 class="moon-title">Veridose</h4>
+            <p class="moon-summary">Plataforma médica multi-perfil com teleconsulta, prescrições e laudos rastreáveis.</p>
+            <div class="moon-foot"><span>Demo Privada</span> <span>📷</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="kstudio" style="--borda-tempo: 10.8s;" tabindex="0" role="button" aria-label="Selecionar K-Studio AI">
+            <span class="moon-badge">MÚSICA &amp; IA</span>
+            <h4 class="moon-title">K-Studio AI</h4>
+            <p class="moon-summary">Estúdio musical com separação inteligente de voz/instrumentos e transmissão multi-tela.</p>
+            <div class="moon-foot"><span>Demo Privada</span> <span>📷</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="transphase" style="--borda-tempo: 14.1s;" tabindex="0" role="button" aria-label="Selecionar Visual TransPhase">
+            <span class="moon-badge">CIÊNCIA &amp; 3D</span>
+            <h4 class="moon-title">Visual TransPhase</h4>
+            <p class="moon-summary">Software desktop Windows nativo para simulação de microestruturas metálicas em 3D/2D.</p>
+            <div class="moon-foot"><span>Capturas / Telas</span> <span>📷</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="pesqfinder" style="--borda-tempo: 11.9s;" tabindex="0" role="button" aria-label="Selecionar PesqFinder">
+            <span class="moon-badge">DADOS &amp; TRIAGEM</span>
+            <h4 class="moon-title">PesqFinder</h4>
+            <p class="moon-summary">Descoberta e qualificação de pesquisadores com auditoria de evidências anti-alucinação.</p>
+            <div class="moon-foot"><span>Demo Privada</span> <span>📷</span></div>
+          </article>
+
+          <article class="cartao moon-card" data-efeito="borda" data-project="scrollskills" style="--borda-tempo: 12.8s;" tabindex="0" role="button" aria-label="Selecionar Scroll Web Engine">
+            <span class="moon-badge">DEVTOOLS &amp; WEB</span>
+            <h4 class="moon-title">Scroll Web Engine</h4>
+            <p class="moon-summary">Motor cinematográfico de scrollytelling 60fps ativo no palco interativo desta página.</p>
+            <div class="moon-foot"><span>Em Operação</span> <span>↑</span></div>
+          </article>
+        </div>
+        <div class="orbit-hint"><span>✦ 9 Luas em Órbita Tridimensional · Arraste para girar com inércia · Clique em qualquer satélite para inspecionar</span></div>
+      </div>
+
+      <div class="portfolio-workbench">
+        <!-- Coluna Esquerda: Seletor de Projetos -->
+        <div class="project-list" id="projectList">
+          <button type="button" class="project-tab is-active" data-project="amafut" data-category="esporte">
+            <div class="tab-top">
+              <span class="tab-domain">ESPORTE &amp; MÍDIA DIGITAL</span>
+              <span class="tab-audience">B2C &amp; B2B · Web Portal</span>
+            </div>
+            <span class="tab-name">AmaFut Blog &amp; Plataforma Esportiva</span>
+            <span class="tab-summary">Portal de notícias, táticas e gestão esportiva com cobertura de torneios regionais e quadras parceiras.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="anmocar" data-category="ambiental">
+            <div class="tab-top">
+              <span class="tab-domain">CIDADANIA &amp; MEIO AMBIENTE</span>
+              <span class="tab-audience">B2C &amp; Terceiro Setor · Web</span>
+            </div>
+            <span class="tab-name">ANMOCAR-BR · Associação Nacional</span>
+            <span class="tab-summary">Portal institucional de utilidade pública para motoristas com programas de logística reversa e cidadania viária.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="alprint" data-category="industrial">
+            <div class="tab-top">
+              <span class="tab-domain">INDÚSTRIA &amp; EMBALAGENS B2B</span>
+              <span class="tab-audience">B2B Internacional · Web App</span>
+            </div>
+            <span class="tab-name">Alprint · Soluções Industriais</span>
+            <span class="tab-summary">Catálogo digital técnico de embalagens e tampas de alumínio de alta precisão para a América Latina.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="hipica" data-category="educacao">
+            <div class="tab-top">
+              <span class="tab-domain">EDUCAÇÃO &amp; MATEMÁTICA</span>
+              <span class="tab-audience">B2C / Educacional · Web App</span>
+            </div>
+            <span class="tab-name">A Ilusão da Aposta · Simulador Hípico</span>
+            <span class="tab-summary">Simulador educativo interativo que desmistifica probabilidades através de corridas e cálculos estatísticos.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="veridose" data-category="saude">
+            <div class="tab-top">
+              <span class="tab-domain">SAÚDE &amp; BIOTECNOLOGIA</span>
+              <span class="tab-audience">B2B &amp; B2C · Web / PWA</span>
+            </div>
+            <span class="tab-name">Veridose · Plataforma Clínica</span>
+            <span class="tab-summary">Plataforma médica multi-perfil para gestão integrada de consultas, telemedicina e laudos rastreáveis.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="kstudio" data-category="entretenimento">
+            <div class="tab-top">
+              <span class="tab-domain">ENTRETENIMENTO &amp; MÚSICA IA</span>
+              <span class="tab-audience">B2C · Web / TV / PC</span>
+            </div>
+            <span class="tab-name">K-Studio AI Karaoke</span>
+            <span class="tab-summary">Estúdio musical com isolamento de faixas de voz e instrumentos, alinhamento de letras e modo palco multi-tela.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="transphase" data-category="ciencia">
+            <div class="tab-top">
+              <span class="tab-domain">CIÊNCIA &amp; ENGENHARIA 3D</span>
+              <span class="tab-audience">B2B / Acadêmico · PC (.exe)</span>
+            </div>
+            <span class="tab-name">Visual TransPhase 3D/2D</span>
+            <span class="tab-summary">Software desktop nativo Windows para simulação metalúrgica de transformação de fases e microestruturas.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="pesqfinder" data-category="ciencia">
+            <div class="tab-top">
+              <span class="tab-domain">CIÊNCIA &amp; DATA INTELLIGENCE</span>
+              <span class="tab-audience">B2B / Pesquisa · Web Corporativa</span>
+            </div>
+            <span class="tab-name">PesqFinder · Inteligência Científica</span>
+            <span class="tab-summary">Descoberta e mapeamento de pesquisadores através de múltiplas bases acadêmicas com evidências comprovadas.</span>
+          </button>
+
+          <button type="button" class="project-tab" data-project="scrollskills" data-category="tecnologia">
+            <div class="tab-top">
+              <span class="tab-domain">TECNOLOGIA &amp; DEVELOPER TOOLS</span>
+              <span class="tab-audience">B2B · Motor Web TypeScript</span>
+            </div>
+            <span class="tab-name">Scroll Web Skills &amp; Stage Engine</span>
+            <span class="tab-summary">Motor cinematográfico de scrollytelling a 60fps sem sequestrar o scroll com auditoria de acessibilidade.</span>
+          </button>
+        </div>
+
+        <!-- Coluna Direita: Inspetor Interativo em Tempo Real -->
+        <div class="project-inspector" id="projectInspector" data-efeito="borda" style="--borda-tempo: 12.8s;" aria-live="polite">
+          <div class="inspector-visual" id="inspectorVisual">
+            <!-- Preenchido dinamicamente pelo JS e já renderizado com o estado inicial (AmaFut) -->
+            <div style="position:relative;width:100%;max-width:680px">
+              <img src="./assets/portfolio/amafut-preview.webp" alt="Preview da plataforma AmaFut Blog" style="width:100%;max-height:290px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px -12px rgba(0,0,0,0.5)">
+              <div style="margin-top:0.65rem;display:flex;justify-content:space-between;align-items:center">
+                <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">PRODUÇÃO · AMERICAS</span>
+                <a href="https://amafut.com/blog" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="padding:0.35rem 0.85rem;font-size:0.78rem">Acessar Site Ao Vivo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="inspector-body">
+            <div class="inspector-header">
+              <div>
+                <span class="cap-code" id="inspectorCategory">ESPORTE &amp; MÍDIA DIGITAL · GESTÃO E CONTEÚDO ESPORTIVO</span>
+                <h3 id="inspectorTitle" style="font-size:1.75rem;margin-bottom:0.2rem">AmaFut Blog &amp; Plataforma de Futebol</h3>
+              </div>
+              <div id="inspectorCtaContainer">
+                <a href="https://amafut.com/blog" target="_blank" rel="noopener noreferrer" class="btn btn-sm" id="inspectorMainCta">Visitar Site Ao Vivo ↗</a>
+              </div>
+            </div>
+
+            <p id="inspectorDescription">Plataforma completa para gestão, notícias e comunidade do futebol amador e semiprofissional. O portal reúne análises táticas, novidades de competições, acompanhamento de quadras parceiras e conteúdos de cobertura esportiva com interface rápida, moderna e totalmente responsiva.</p>
+
+            <div class="inspector-meta" id="inspectorStack">
+              <span class="stack-chip">Portal Editorial Web</span>
+              <span class="stack-chip">Alta Retenção Mobile</span>
+              <span class="stack-chip">Conteúdo em Tempo Real</span>
+              <span class="stack-chip">Infraestrutura em Nuvem</span>
+              <span class="stack-chip">Otimização SEO &amp; Acessibilidade</span>
+            </div>
+
+            <div class="inspector-columns">
+              <div>
+                <h4 style="font-size:0.95rem;margin-bottom:0.6rem">Destaques da Solução</h4>
+                <ul class="feature-list" id="inspectorFeatures">
+                  <li>Portal editorial com categorização dinâmica de artigos, dicas táticas e notícias em tempo real.</li>
+                  <li>Integração com ecossistema AmaFut para promoção de quadras, campeonatos e atletas.</li>
+                  <li>Otimização extrema de carregamento e navegação ágil sem atrasos em qualquer dispositivo.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 style="font-size:0.95rem;margin-bottom:0.6rem">Acesso &amp; Disponibilidade</h4>
+                <ul class="feature-list" id="inspectorPlatforms">
+                  <li><strong>Ambiente:</strong> Portal web de alta performance acessível em qualquer dispositivo.</li>
+                  <li><strong>Público:</strong> Atletas, gestores de quadras e torcedores (B2C &amp; B2B Esportivo).</li>
+                  <li><strong>Link Online:</strong> <a href="https://amafut.com/blog" target="_blank" rel="noopener noreferrer" style="color:var(--tk-accent);text-decoration:underline">amafut.com/blog ↗</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ====================================================================
+         ATO 4: LABORATÓRIO INTERATIVO DE VÍDEO (SCRUBBING POR MOUSE / TOQUE)
+         ==================================================================== -->
+    <section class="surface-section" id="laboratorio">
+      <div class="scrubber-lab">
+        <div class="lab-grid">
+          <div>
+            <h2>Toque, arraste ou role: <span class="accent-word">controle temporal</span> em todas as cenas.</h2>
+            <p>Além do palco principal no topo da página, você pode testar aqui os outros dois vídeos da pasta <code>src/</code> otimizados sem áudio e com keyframes densos (<code>GOP=8</code>) para resposta imediata ao dedo na tela touch ou ao arrastar do mouse.</p>
+            <p style="font-size:0.88rem"><strong>Dica interativa:</strong> Deslize o dedo horizontalmente sobre o quadro do vídeo (ou mova o mouse com o botão pressionado / use a barra abaixo) para avançar e retroceder cada detalhe em tempo real.</p>
+
+            <div class="video-switcher" role="group" aria-label="Escolher cena de vídeo">
+              <button type="button" class="filter-btn is-active" data-video-src="./film/showcase-01.mp4" data-video-poster="./film/showcase-01-poster.webp">
+                Cena 01 · Ecossistema Mobile &amp; Web
+              </button>
+              <button type="button" class="filter-btn" data-video-src="./film/showcase-02.mp4" data-video-poster="./film/showcase-02-poster.webp">
+                Cena 02 · Arquitetura Digital Multi-Tela
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <div class="video-stage-frame" id="interactiveVideoFrame" aria-label="Palco de vídeo interativo">
+              <video id="labVideo" src="./film/showcase-01.mp4" poster="./film/showcase-01-poster.webp" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="scrubber-controls">
+              <div class="scrubber-bar-row">
+                <button type="button" class="theme-toggle" id="playPauseBtn">Pausar / Scrub Manual</button>
+                <input type="range" class="scrubber-range" id="videoScrubber" min="0" max="100" step="0.1" value="0" aria-label="Linha do tempo do vídeo">
+                <span id="videoTimeReadout" style="font-family:var(--tk-font-mono);font-size:0.78rem;min-width:68px;text-align:right">0.0s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ====================================================================
+         ATO 5: FECHAMENTO QUE SEGURA & COMPROMISSO DIRETO
+         ==================================================================== -->
+    <section class="surface-section" id="contato">
+      <div class="closing-cta-box">
+        <div>
+          <h2>Vamos construir seu próximo <span class="accent-word">software de referência</span>?</h2>
+          <p>Seja um aplicativo B2C para milhares de usuários, uma plataforma SaaS B2B ou um sistema técnico de alta complexidade para PC e Web, você fala diretamente com quem projeta e escreve o código.</p>
+          <div class="stage-actions">
+            <a href="mailto:admin@nexviatec.com?subject=Novo%20Projeto%20—%20Nexvia%20Tech" class="btn">Iniciar Projeto por E-mail →</a>
+            <a href="tel:+552430258700" class="btn-secondary">Ligar: (24) 3025-8700</a>
+          </div>
+        </div>
+
+        <div class="contact-cards">
+          <a href="mailto:admin@nexviatec.com" class="contact-item">
+            <div>
+              <span class="contact-label">E-MAIL OFICIAL DE ENGENHARIA &amp; SUPORTE</span>
+              <span class="contact-value">admin@nexviatec.com</span>
+            </div>
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a href="tel:+552430258700" class="contact-item">
+            <div>
+              <span class="contact-label">ATENDIMENTO COMERCIAL &amp; TÉCNICO</span>
+              <span class="contact-value">(24) 3025-8700</span>
+            </div>
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="contact-item">
+            <div>
+              <span class="contact-label">SEDE OPERACIONAL (VOLTA REDONDA — RJ)</span>
+              <span class="contact-value">Rua Fernando, 64 · Santo Agostinho · CEP 27.230-080</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <!-- Rodapé Institucional Transparente com todos os dados verificados do CNPJ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-link" style="margin-bottom:0.8rem">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 256 256">
+              <path d="M 32 48 L 80 32 V 208 L 32 224 Z M 96 48 L 160 128 V 208 L 96 128 Z M 176 48 L 224 32 V 208 L 176 224 Z"/>
+            </svg>
+          </span>
+          <span>NEXVIA TECH</span>
+        </div>
+        <p style="font-size:0.88rem">Desenvolvimento e licenciamento de programas de computador, aplicativos móveis, sistemas web e consultoria em Tecnologia da Informação para mercados B2B e B2C.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;margin-bottom:0.75rem">Registro Cadastral (CNPJ Oficial)</h3>
+        <ul class="legal-list">
+          <li><strong>RAZÃO SOCIAL:</strong> NEXVIA TECNOLOGIA LTDA</li>
+          <li><strong>NOME FANTASIA:</strong> NEXVIA TECH</li>
+          <li><strong>CNPJ:</strong> 68.800.823/0001-35 (Matriz · Situação Ativa)</li>
+          <li><strong>NATUREZA JURÍDICA:</strong> 206-2 · Sociedade Empresária Limitada</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;margin-bottom:0.75rem">Localização &amp; Atividades</h3>
+        <ul class="legal-list">
+          <li><strong>ENDEREÇO:</strong> Rua Fernando, nº 64, Santo Agostinho</li>
+          <li><strong>MUNICÍPIO / UF:</strong> Volta Redonda — RJ · CEP 27.230-080</li>
+          <li><strong>CNAEs:</strong> 62.03-1-00 · 62.01-5-01 · 62.02-3-00 · 62.04-0-00 · 62.09-1-00</li>
+          <li><strong>CONTATO:</strong> admin@nexviatec.com · (24) 3025-8700</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Acessível: Solicitar Demonstração / Print da Tela Principal -->
+  <dialog id="demoModal" class="demo-dialog" aria-labelledby="demoDialogTitle">
+    <div class="demo-header">
+      <div>
+        <span class="cap-code">ENGENHARIA &amp; AMBIENTE CORPORATIVO</span>
+        <h3 id="demoDialogTitle">Solicitar Prints &amp; Demonstração</h3>
+      </div>
+      <button type="button" class="demo-close-btn" id="demoCloseBtn" aria-label="Fechar janela">×</button>
+    </div>
+    <p style="font-size:0.86rem;color:var(--tk-ink-soft);margin-bottom:0.8rem">
+      Receba por e-mail capturas da tela principal (Hero e telas operacionais) ou agende uma demonstração técnica direta com os engenheiros da Nexvia Tech.
+    </p>
+    <form class="demo-form" id="demoForm">
+      <input type="hidden" id="demoProjectField" name="project" value="">
+      <label>
+        <span>NOME OU ORGANIZAÇÃO *</span>
+        <input type="text" id="demoName" name="name" required placeholder="Seu nome ou empresa">
+      </label>
+      <label>
+        <span>E-MAIL DE CONTATO *</span>
+        <input type="email" id="demoEmail" name="email" required placeholder="seuemail@empresa.com">
+      </label>
+      <label>
+        <span>INTERESSE / PROJETO SELECIONADO</span>
+        <textarea id="demoMessage" name="message" rows="3"></textarea>
+      </label>
+      <div style="display:flex;gap:0.75rem;margin-top:0.4rem;flex-wrap:wrap">
+        <button type="submit" class="btn" style="flex:1">Enviar Solicitação por E-mail →</button>
+        <button type="button" class="btn-secondary" id="demoCancelBtn">Fechar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Script do Motor de Palco (tk-stage.js sem modificação) + Interatividade da Página -->
+  <script type="module">
+    import { ScrollStage, framesFromManifest } from "./tk-stage.js";
+
+    document.documentElement.classList.add("tk-js");
+
+    // 1. Inicialização do Palco de Scroll Principal (Ato 1)
+    const heroSection = document.querySelector("#hero");
+    const hudText = document.querySelector("#stageHudText");
+
+    try {
+      const [lg, sm] = await Promise.all([
+        fetch("./film/lg/manifest.json").then((r) => r.json()),
+        fetch("./film/sm/manifest.json").then((r) => r.json()),
+      ]);
+
+      new ScrollStage({
+        section: heroSection,
+        canvas: heroSection.querySelector("canvas"),
+        // Duas pausas deliberadas para leitura confortável das legendas
+        keys: [
+          [0, 0],
+          [0.30, 58],
+          [0.58, 58],
+          [0.76, 132],
+          [0.92, 132],
+          [1, 178],
+        ],
+        variants: [
+          { media: "(max-aspect-ratio: 3/4)", frames: framesFromManifest(sm, "./film/sm"), focal: [0.5, 0.5] },
+          { frames: framesFromManifest(lg, "./film/lg") },
+        ],
+        smooth: 0.10,
+        onUpdate: (state) => {
+          if (hudText) {
+            const f = String((state.frame ?? 0) + 1).padStart(3, "0");
+            const pct = Math.round((state.progress ?? 0) * 100);
+            hudText.textContent = `SCROLL / TOUCH TIMELINE · QUADRO ${f} / 179 (${pct}%)`;
+          }
+          heroSection.querySelectorAll("[data-tk-band]").forEach((band) => {
+            const op = parseFloat(band.style.opacity || "0");
+            if (op > 0.05) {
+              band.style.visibility = "visible";
+              band.removeAttribute("inert");
+            } else {
+              band.style.visibility = "hidden";
+              band.setAttribute("inert", "");
+            }
+          });
+        },
+      });
+    } catch (err) {
+      console.error("Falha ao inicializar ScrollStage:", err);
+    }
+
+    // Garante que a navegação por teclado (Tab) posicione o elemento em foco imediatamente na tela
+    window.addEventListener("focusin", (e) => {
+      if (e.target && typeof e.target.scrollIntoView === "function" && !e.target.closest("#hero")) {
+        e.target.scrollIntoView({ block: "nearest", behavior: "auto" });
+      }
+    });
+    const themeToggle = document.getElementById("themeToggle");
+    const themeLabel = document.getElementById("themeLabel");
+    const savedTheme = localStorage.getItem("nexvia-theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      document.documentElement.dataset.theme = savedTheme;
+    }
+    function syncThemeUI() {
+      const current = document.documentElement.dataset.theme || "dark";
+      themeLabel.textContent = current === "dark" ? "Tema Claro" : "Tema Escuro";
+    }
+    syncThemeUI();
+
+    themeToggle?.addEventListener("click", () => {
+      const current = document.documentElement.dataset.theme || "dark";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("nexvia-theme", next);
+      syncThemeUI();
+    });
+
+    // 3. Interação 3D das Lâminas Prismáticas (Ato 2: Fanned Deck sem colisão)
+    const prismStage = document.getElementById("prismStage");
+    const prismStack = document.getElementById("prismStack");
+    const slabs = document.querySelectorAll(".prism-slab");
+    const slabPills = document.querySelectorAll("[data-slab-pill]");
+
+    function setActiveSlab(idx) {
+      if (prismStack) prismStack.dataset.active = idx;
+      slabs.forEach((s) => {
+        const isActive = s.dataset.slab === String(idx);
+        s.classList.toggle("is-active", isActive);
+        s.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+      slabPills.forEach((p) => {
+        p.classList.toggle("is-active", p.dataset.slabPill === String(idx));
+      });
+    }
+
+    slabs.forEach((slab) => {
+      const idx = slab.dataset.slab;
+      // Seleção apenas por clique (e teclado), garantindo acesso perfeito sem jitter de mouseenter
+      slab.addEventListener("click", () => setActiveSlab(idx));
+      slab.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setActiveSlab(idx);
+        }
+      });
+    });
+
+    slabPills.forEach((pill) => {
+      pill.addEventListener("click", () => setActiveSlab(pill.dataset.slabPill));
+    });
+
+    if (prismStage && prismStack && window.matchMedia("(pointer: fine)").matches) {
+      prismStage.addEventListener("mousemove", (e) => {
+        const rect = prismStage.getBoundingClientRect();
+        const nx = (e.clientX - rect.left) / rect.width - 0.5;
+        const ny = (e.clientY - rect.top) / rect.height - 0.5;
+        prismStack.style.transform = `rotateY(${nx * 10}deg) rotateX(${-ny * 8}deg)`;
+      });
+      prismStage.addEventListener("mouseleave", () => {
+        prismStack.style.transform = "";
+      });
+    }
+
+    // 3.1 Interação das Cartas de Capacidade (3D Tilt no Mouse + 3D Flipcard no Clique)
+    const capCards = document.querySelectorAll(".cap-card-container[data-tilt='true']");
+    capCards.forEach((card) => {
+      const inner = card.querySelector(".cap-card-inner");
+
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const tiltX = ((y / rect.height) - 0.5) * -14;
+        const tiltY = ((x / rect.width) - 0.5) * 14;
+        const isFlipped = card.classList.contains("is-flipped");
+        const baseRotateY = isFlipped ? 180 : 0;
+        inner.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${(baseRotateY + tiltY).toFixed(2)}deg)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        const isFlipped = card.classList.contains("is-flipped");
+        inner.style.transform = isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
+      });
+
+      card.addEventListener("click", (e) => {
+        // Se clicar em link interno da face traseira, preserva o clique do link
+        if (e.target.closest("a")) return;
+        card.classList.toggle("is-flipped");
+        const isFlipped = card.classList.contains("is-flipped");
+        inner.style.transform = isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
+      });
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          card.classList.toggle("is-flipped");
+          const isFlipped = card.classList.contains("is-flipped");
+          inner.style.transform = isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
+        }
+      });
+    });
+
+    // 3.2 Modal de Solicitação de Demonstração / Print da Tela Principal
+    const demoModal = document.getElementById("demoModal");
+    const demoDialogTitle = document.getElementById("demoDialogTitle");
+    const demoProjectField = document.getElementById("demoProjectField");
+    const demoMessage = document.getElementById("demoMessage");
+    const demoCloseBtn = document.getElementById("demoCloseBtn");
+    const demoCancelBtn = document.getElementById("demoCancelBtn");
+    const demoForm = document.getElementById("demoForm");
+
+    window.openDemoModal = function (projectName) {
+      if (!demoModal) return;
+      demoDialogTitle.textContent = `Solicitar Prints · ${projectName}`;
+      demoProjectField.value = projectName;
+      demoMessage.value = `Olá! Gostaria de receber o print da Hero e telas operacionais do software "${projectName}" e saber mais sobre a implementação da Nexvia Tech.`;
+      demoModal.showModal();
+    };
+
+    function closeDemoModal() {
+      demoModal?.close();
+    }
+    demoCloseBtn?.addEventListener("click", closeDemoModal);
+    demoCancelBtn?.addEventListener("click", closeDemoModal);
+    demoModal?.addEventListener("click", (e) => {
+      const rect = demoModal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.left + rect.width
+      );
+      if (!isInDialog) closeDemoModal();
+    });
+
+    demoForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("demoName").value;
+      const email = document.getElementById("demoEmail").value;
+      const project = demoProjectField.value;
+      const msg = demoMessage.value;
+      const subject = encodeURIComponent(`Solicitação de Prints / Demonstração: ${project}`);
+      const body = encodeURIComponent(`Nome / Empresa: ${name}\nE-mail: ${email}\nProjeto Selecionado: ${project}\n\nMensagem:\n${msg}`);
+      window.location.href = `mailto:admin@nexviatec.com?subject=${subject}&body=${body}`;
+      closeDemoModal();
+    });
+
+    // 4. Dados Reais dos Projetos do Portfólio da Nexvia Tech (Ato 3)
+    // Sem nomes de frameworks e sem caminhos internos de pastas no computador
+    const PROJECTS = {
+      amafut: {
+        category: "ESPORTE & MÍDIA DIGITAL · GESTÃO E CONTEÚDO ESPORTIVO",
+        title: "AmaFut Blog & Plataforma de Futebol",
+        description:
+          "Plataforma completa para gestão, notícias e comunidade do futebol amador e semiprofissional. O portal reúne análises táticas, novidades de competições, acompanhamento de quadras parceiras e conteúdos de cobertura esportiva com interface rápida, moderna e totalmente responsiva.",
+        stack: ["Portal Editorial Web", "Alta Retenção Mobile", "Conteúdo em Tempo Real", "Infraestrutura em Nuvem", "Otimização SEO"],
+        features: [
+          "Portal editorial com categorização dinâmica de artigos, dicas táticas e notícias em tempo real.",
+          "Integração com ecossistema AmaFut para promoção de quadras, campeonatos e atletas.",
+          "Otimização extrema de carregamento e navegação ágil sem atrasos em qualquer dispositivo.",
+        ],
+        platforms: [
+          "<strong>Ambiente:</strong> Portal web de alta performance acessível em qualquer dispositivo.",
+          "<strong>Público:</strong> Atletas, gestores de quadras e torcedores (B2C &amp; B2B Esportivo).",
+          "<strong>Link Online:</strong> <a href=\"https://amafut.com/blog\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--tk-accent);text-decoration:underline\">amafut.com/blog ↗</a>",
+        ],
+        liveUrl: "https://amafut.com/blog",
+        visualHtml: `
+          <div style="position:relative;width:100%;max-width:680px">
+            <img src="./assets/portfolio/amafut-preview.webp" alt="Preview da plataforma AmaFut Blog" style="width:100%;max-height:290px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px -12px rgba(0,0,0,0.5)">
+            <div style="margin-top:0.65rem;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">PRODUÇÃO · AMERICAS</span>
+              <a href="https://amafut.com/blog" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="padding:0.35rem 0.85rem;font-size:0.78rem">Acessar Site Ao Vivo ↗</a>
+            </div>
+          </div>
+        `,
+      },
+      anmocar: {
+        category: "CIDADANIA & MEIO AMBIENTE · PORTAL INSTITUCIONAL OSCIP",
+        title: "ANMOCAR-BR · Associação Nacional dos Motoristas",
+        description:
+          "Portal oficial da Associação Nacional dos Motoristas de Carros de Passeio e Similares (OSCIP fundada em 2015). A plataforma unifica a defesa dos direitos dos motoristas com projetos práticos de sustentabilidade, descarte correto de resíduos automotivos, logística reversa de pneus/baterias e educação para cidadania viária.",
+        stack: ["Portal Institucional OSCIP", "Acessibilidade Universal", "Mobilidade Cidadã", "Logística Reversa", "Infraestrutura em Nuvem"],
+        features: [
+          "Design system 'Do volante ao planeta' com navegação clara entre eixos institucionais e ambientais.",
+          "Módulos informativos sobre legislação viária, reciclagem e impacto ecológico sustentável.",
+          "Arquitetura escalável para captação de associados e parcerias com o setor público e privado.",
+        ],
+        platforms: [
+          "<strong>Ambiente:</strong> Portal web de utilidade pública responsivo para condutores em todo o país.",
+          "<strong>Público:</strong> Motoristas de aplicativo, frotistas e terceiro setor (B2C &amp; B2B Ambiental).",
+          "<strong>Link Online:</strong> <a href=\"https://anmocar-br.vercel.app/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--tk-accent);text-decoration:underline\">anmocar-br.vercel.app ↗</a>",
+        ],
+        liveUrl: "https://anmocar-br.vercel.app/",
+        visualHtml: `
+          <div style="position:relative;width:100%;max-width:680px">
+            <img src="./assets/portfolio/anmocar-preview.webp" alt="Preview da plataforma ANMOCAR-BR" style="width:100%;max-height:290px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px -12px rgba(0,0,0,0.5)">
+            <div style="margin-top:0.65rem;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">PRODUÇÃO · ACESSO OFICIAL</span>
+              <a href="https://anmocar-br.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="padding:0.35rem 0.85rem;font-size:0.78rem">Acessar Site Ao Vivo ↗</a>
+            </div>
+          </div>
+        `,
+      },
+      alprint: {
+        category: "INDÚSTRIA & EMBALAGENS B2B · CATÁLOGO E ENGENHARIA",
+        title: "Alprint · Soluções Industriais de Alta Precisão",
+        description:
+          "Plataforma industrial corporativa da Alprint, líder com mais de 25 anos no desenvolvimento e manufatura de embalagens e tampas de alumínio de alta precisão para a indústria alimentícia em toda a América Latina. Apresenta catálogo técnico, especificações de selagem hermética e canal de propostas B2B.",
+        stack: ["Catálogo Técnico Interativo", "Engenharia de Embalagens", "Cotações B2B Rápidas", "Escala América Latina", "Alta Disponibilidade"],
+        features: [
+          "Apresentação técnica de soluções em alumínio com fichas de precisão e propriedades de barreira.",
+          "Experiência visual moderna com transições suaves e direcionamento para cotações corporativas.",
+          "Estrutura otimizada para atendimento de marcas líderes do setor alimentício multinacional.",
+        ],
+        platforms: [
+          "<strong>Ambiente:</strong> Interface executiva otimizada para compras e suprimentos B2B.",
+          "<strong>Público:</strong> Indústrias alimentícias, farmacêuticas e convertedoras (B2B Industrial).",
+          "<strong>Link Online:</strong> <a href=\"https://alprint.vercel.app/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--tk-accent);text-decoration:underline\">alprint.vercel.app ↗</a>",
+        ],
+        liveUrl: "https://alprint.vercel.app/",
+        visualHtml: `
+          <div style="position:relative;width:100%;max-width:680px">
+            <img src="./assets/portfolio/alprint-preview.webp" alt="Preview da plataforma Alprint" style="width:100%;max-height:290px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px -12px rgba(0,0,0,0.5)">
+            <div style="margin-top:0.65rem;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">PRODUÇÃO · LATAM B2B</span>
+              <a href="https://alprint.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="padding:0.35rem 0.85rem;font-size:0.78rem">Acessar Site Ao Vivo ↗</a>
+            </div>
+          </div>
+        `,
+      },
+      hipica: {
+        category: "EDUCAÇÃO, ESPORTE & MATEMÁTICA · SIMULADOR INTERATIVO",
+        title: "A Ilusão da Aposta · Simulador Educativo",
+        description:
+          "Aplicativo web interativo criado para educação financeira e matemática aplicada através do esporte equestre. Simula corridas de cavalos com probabilidades dinâmicas decrescentes e utiliza análise estatística e tutoria inteligente para demonstrar visualmente o valor esperado e a matemática real por trás das probabilidades.",
+        stack: ["Simulador em Tempo Real", "Educação em Probabilidades", "Telemetria Estatística", "Tutor Inteligente", "Mobile-First Fluido"],
+        features: [
+          "Motor de simulação de corridas em tempo real com animações fluidas e cálculo transparente de odds.",
+          "Painel analítico que contrasta intuição humana com probabilidade matemática acumulada.",
+          "Explicações pedagógicas personalizadas a cada rodada desmistificando o retorno financeiro real.",
+        ],
+        platforms: [
+          "<strong>Ambiente:</strong> Simulador interativo otimizado para celulares, tablets e computadores.",
+          "<strong>Público:</strong> Estudantes, instituições de ensino e entusiastas (B2C &amp; Educação).",
+          "<strong>Link Online:</strong> <a href=\"https://hipica-bet-serj.vercel.app/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--tk-accent);text-decoration:underline\">hipica-bet-serj.vercel.app ↗</a>",
+        ],
+        liveUrl: "https://hipica-bet-serj.vercel.app/",
+        visualHtml: `
+          <div style="position:relative;width:100%;max-width:680px">
+            <img src="./assets/portfolio/hipica-preview.webp" alt="Preview da plataforma A Ilusão da Aposta" style="width:100%;max-height:290px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px -12px rgba(0,0,0,0.5)">
+            <div style="margin-top:0.65rem;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">PRODUÇÃO · SIMULADOR ABERTO</span>
+              <a href="https://hipica-bet-serj.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="padding:0.35rem 0.85rem;font-size:0.78rem">Acessar Simulador Ao Vivo ↗</a>
+            </div>
+          </div>
+        `,
+      },
+      veridose: {
+        category: "SAÚDE & BIOTECNOLOGIA · PLATAFORMA CLÍNICA B2B2C",
+        title: "Veridose · Plataforma Clínica Integrada",
+        description:
+          "Sistema completo de operação clínica e sinergia terapêutica estruturado em quatro perfis integrados (Médico, Paciente, Laboratório e Administração). Inclui fila médica inteligente, convites com aceite rastreável, gestão de lotes, mensageria segura, geração de protocolos em PDF e teleconsulta por vídeo.",
+        stack: ["Multi-Perfil Segmentado", "Teleatendimento Integrado", "Prescrições Rastreáveis", "Conformidade LGPD", "PWA Mobile-First"],
+        features: [
+          "Quatro portais independentes com controle rigoroso de permissões e sessões seguras.",
+          "Catálogo dinâmico de sinergias com validação de regras clínicas personalizadas.",
+          "Geração rastreada de laudos em PDF e teleatendimento seguro integrado no navegador.",
+        ],
+        platforms: [
+          "<strong>Formato:</strong> Aplicação Web &amp; PWA mobile-first para iOS, Android e Desktop.",
+          "<strong>Disponibilidade:</strong> Ambiente Clínico Corporativo Privado (Software Sob Encomenda).",
+          "<strong>Demonstração:</strong> Capturas de tela e apresentações técnicas disponíveis sob solicitação.",
+        ],
+        liveUrl: null,
+        visualHtml: `
+          <div class="arch-canvas">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;margin-bottom:0.75rem">
+              <div style="display:flex;align-items:center;gap:0.85rem">
+                <img src="./assets/portfolio/veridose-icon.webp" alt="Ícone Veridose" width="52" height="52" style="border-radius:14px">
+                <div>
+                  <strong style="font-family:var(--tk-font-display);font-size:1.15rem;display:block">Veridose · Arquitetura Multi-Perfil</strong>
+                  <span style="font-size:0.82rem;color:var(--tk-ink-soft)">Fluxo integrado entre Médico, Paciente, Farmácia e Gestão</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm" onclick="openDemoModal('Veridose')">📷 Solicitar Print da Hero / Telas</button>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-node"><strong>PORTAL MÉDICO</strong>Prescrições &amp; Telemedicina</div>
+              <div class="arch-node"><strong>PORTAL PACIENTE</strong>Adesão &amp; Protocolos Pessoais</div>
+              <div class="arch-node"><strong>LABORATÓRIO</strong>Gestão de Lotes &amp; Rastreabilidade</div>
+              <div class="arch-node"><strong>GESTÃO &amp; AUDITORIA</strong>Conformidade LGPD &amp; Controle</div>
+            </div>
+          </div>
+        `,
+      },
+      kstudio: {
+        category: "ENTRETENIMENTO & ÁUDIO IA · ESTÚDIO MUSICAL",
+        title: "K-Studio AI Karaoke",
+        description:
+          "Estúdio de karaokê e prática musical assistido por Inteligência Artificial. Separa automaticamente voz e instrumentos em tempo real com aceleração gráfica, alinha cifras e transcreve letras com alta fidelidade, oferecendo modos Cantar, Praticar e Festa com transmissão de palco para Smart TVs.",
+        stack: ["Isolamento Neural de Stems", "Estúdio de Prática em Loop", "Espelhamento para TV / Palco", "Alinhamento de Letras", "Alta Fidelidade de Áudio"],
+        features: [
+          "Separação inteligente de faixas (voz principal, backing vocals, bateria, baixo e harmonia) com volume individual.",
+          "Modos Cantar, Praticar (treino de frases em repetição contínua) e Festa com fila compartilhada presencial.",
+          "Exportação de gravações e sincronização resiliente com palco secundário para telas e Smart TVs.",
+        ],
+        platforms: [
+          "<strong>Formato:</strong> Aplicação para Desktop PC, Web e Telas Secundárias de Palco.",
+          "<strong>Disponibilidade:</strong> Software Especializado para Estúdios e Eventos (Sob Consulta).",
+          "<strong>Demonstração:</strong> Sessões de apresentação e prints da interface disponíveis sob solicitação.",
+        ],
+        liveUrl: null,
+        visualHtml: `
+          <div class="arch-canvas">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem">
+              <div>
+                <strong style="font-family:var(--tk-font-display);font-size:1.15rem;display:block">K-Studio · Pipeline Musical Inteligente</strong>
+                <span style="font-size:0.82rem;color:var(--tk-ink-soft)">Processamento acelerado com isolamento de stems e palco multi-tela</span>
+              </div>
+              <button type="button" class="btn btn-sm" onclick="openDemoModal('K-Studio AI Karaoke')">📷 Solicitar Print da Hero / Telas</button>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-node"><strong>INGESTÃO</strong>Áudio &amp; Repertório Musical</div>
+              <div class="arch-node"><strong>SEPARAÇÃO</strong>Isolamento de Voz &amp; Instrumentos</div>
+              <div class="arch-node"><strong>LETRAS &amp; CIFRAS</strong>Sincronização Visual Dinâmica</div>
+              <div class="arch-node"><strong>PALCO &amp; TV</strong>Modos Praticar, Cantar e Festa</div>
+            </div>
+          </div>
+        `,
+      },
+      transphase: {
+        category: "CIÊNCIA & ENGENHARIA METALÚRGICA · DESKTOP PC",
+        title: "Visual TransPhase 3D / 2D",
+        description:
+          "Aplicação científica nativa para Windows (.exe independente) voltada à simulação computacional de transformação de fases e microestruturas metalúrgicas em 3D e 2D. Combina interface gráfica moderna de alta precisão com dois motores numéricos de alta performance e visualização volumétrica espacial.",
+        stack: ["Visualização Tridimensional 3D", "Análise Microestrutural 2D", "Simulação Metalúrgica", "Cálculo Numérico Avançado", "Executável Independente"],
+        features: [
+          "Modo Etapas 3D com geração de base celular, transformação passo a passo e pausa para inspeção espacial.",
+          "Modo Imagem 2D que segmenta contornos de grão e classifica seletivamente fases microestruturais.",
+          "Empacotamento completo em executável nativo Windows sem exigência de dependências instaladas na máquina.",
+        ],
+        platforms: [
+          "<strong>Formato:</strong> Executável Nativo Windows (.exe independente com aceleração gráfica).",
+          "<strong>Disponibilidade:</strong> Software Proprietário para Indústria Metalúrgica e Laboratórios de Pesquisa.",
+          "<strong>Demonstração:</strong> Apresentações corporativas e capturas de tela detalhadas sob consulta.",
+        ],
+        liveUrl: null,
+        visualHtml: `
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;width:100%">
+              <img src="./assets/portfolio/transphase-3d.webp" alt="Interface 3D do Visual TransPhase" loading="lazy" style="width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.3)">
+              <img src="./assets/portfolio/transphase-charts.webp" alt="Análise gráfica e teórica do Visual TransPhase" loading="lazy" style="width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.3)">
+            </div>
+            <div style="margin-top:0.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem">
+              <span style="font-family:var(--tk-font-mono);font-size:0.75rem;color:var(--tk-ink-soft)">SOFTWARE DESKTOP NATIVO · CAPTURAS REAIS</span>
+              <button type="button" class="btn btn-sm" onclick="openDemoModal('Visual TransPhase 3D/2D')">📷 Solicitar Novas Telas / Demonstração</button>
+            </div>
+          </div>
+        `,
+      },
+      pesqfinder: {
+        category: "CIÊNCIA & INTELIGÊNCIA DE DADOS · PIPELINE VERIFICÁVEL",
+        title: "PesqFinder · Inteligência e Triagem Científica",
+        description:
+          "Sistema de descoberta, cruzamento e qualificação de pesquisadores científicos brasileiros em 10 estágios auditáveis. Une a varredura de bases abertas globais e institucionais com triagem assistida que exige citação estrita de evidências verificáveis para impedir alucinações ou dados falsos.",
+        stack: ["Inteligência de Dados Científicos", "Auditoria de Evidências Reais", "Mapeamento de Especialistas", "Exportação Estruturada", "Conformidade LGPD"],
+        features: [
+          "Resolução automática de identificadores acadêmicos e ingestão em lote com filtros determinísticos rigorosos.",
+          "Triagem assistida blindada contra alucinações com citação mandatória de evidências verificáveis.",
+          "Exportação dupla: planilhas analíticas estruturadas + Dashboard corporativo com rotina de retenção LGPD.",
+        ],
+        platforms: [
+          "<strong>Formato:</strong> Plataforma Web Corporativa, Dashboards e Relatórios Analíticos.",
+          "<strong>Disponibilidade:</strong> Solução Institucional B2B para Departamentos de P&amp;D e Recrutamento.",
+          "<strong>Demonstração:</strong> Apresentações técnicas e amostras do painel sob solicitação.",
+        ],
+        liveUrl: null,
+        visualHtml: `
+          <div class="arch-canvas">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem">
+              <div>
+                <strong style="font-family:var(--tk-font-display);font-size:1.15rem;display:block">PesqFinder · Pipeline de Descoberta Auditável</strong>
+                <span style="font-size:0.82rem;color:var(--tk-ink-soft)">Cruzamento de bases acadêmicas com validação de evidências e conformidade LGPD</span>
+              </div>
+              <button type="button" class="btn btn-sm" onclick="openDemoModal('PesqFinder')">📷 Solicitar Print da Hero / Telas</button>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-node"><strong>VARREDURA</strong>Bases Científicas Abertas</div>
+              <div class="arch-node"><strong>CRUZAMENTO</strong>Filtros Duros &amp; Produção Real</div>
+              <div class="arch-node"><strong>TRIAGEM AUDITADA</strong>Citação Obrigatória de Fontes</div>
+              <div class="arch-node"><strong>RELATÓRIOS B2B</strong>Painéis &amp; Planilhas Estruturadas</div>
+            </div>
+          </div>
+        `,
+      },
+      scrollskills: {
+        category: "TECNOLOGIA & DEVELOPER TOOLS · MOTOR DE SCROLL 60FPS",
+        title: "Scroll Web Skills & Cinematic Stage Engine",
+        description:
+          "Framework e motor agnóstico em TypeScript para construção de experiências web cinematográficas guiadas por scroll (como o palco holográfico no topo deste próprio site). Controla sequências de quadros de alta resolução sem bloquear a rolagem natural do usuário, com auditoria automatizada de acessibilidade.",
+        stack: ["Motor de Rolagem 60fps", "Zero Scrolljacking", "Carregamento Progressivo", "Acessibilidade Universal", "Auditoria Automatizada"],
+        features: [
+          "Carregamento progressivo que prioriza quadros-chave para inicialização ágil e suporte nativo a movimento reduzido.",
+          "Arquitetura nativa sticky que garante rolagem livre e confortável tanto em touch quanto no mouse.",
+          "Verificação automatizada multi-browser de contraste WCAG, determinismo de renderização e navegação por teclado.",
+        ],
+        platforms: [
+          "<strong>Formato:</strong> Motor de Engenharia Web e Pacote de Desenvolvimento Frontend.",
+          "<strong>Disponibilidade:</strong> Tecnologia Proprietária em Operação Ativa nesta Página.",
+          "<strong>Demonstração:</strong> Interaja com o palco no topo do site ou solicite uma sessão técnica.",
+        ],
+        liveUrl: null,
+        visualHtml: `
+          <div class="arch-canvas">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem">
+              <div>
+                <strong style="font-family:var(--tk-font-display);font-size:1.15rem;display:block">10K ScrollStage Engine · Tecnologia Ativa</strong>
+                <span style="font-size:0.82rem;color:var(--tk-ink-soft)">O mesmo motor que anima a experiência holográfica no topo deste site</span>
+              </div>
+              <a href="#hero" class="btn btn-sm">Ver Palco no Topo ↑</a>
+            </div>
+            <div class="arch-flow">
+              <div class="arch-node"><strong>PIPELINE DE MÍDIA</strong>Otimização de Quadros de Alta Resolução</div>
+              <div class="arch-node"><strong>STICKY STAGE</strong>Rolagem Fluida sem Sequestro de Scroll</div>
+              <div class="arch-node"><strong>ACESSIBILIDADE</strong>Suporte a Movimento Reduzido &amp; WCAG</div>
+              <div class="arch-node"><strong>CONTROLE TEMPORAL</strong>Interação Tátil em Qualquer Dispositivo</div>
+            </div>
+          </div>
+        `,
+      },
+    };
+
+    const projectTabs = document.querySelectorAll(".project-tab");
+    const filterBtns = document.querySelectorAll("[data-filter]");
+    const inspectorVisual = document.getElementById("inspectorVisual");
+    const inspectorCategory = document.getElementById("inspectorCategory");
+    const inspectorTitle = document.getElementById("inspectorTitle");
+    const inspectorDescription = document.getElementById("inspectorDescription");
+    const inspectorStack = document.getElementById("inspectorStack");
+    const inspectorFeatures = document.getElementById("inspectorFeatures");
+    const inspectorPlatforms = document.getElementById("inspectorPlatforms");
+    const inspectorCtaContainer = document.getElementById("inspectorCtaContainer");
+
+    window.selectProject = function (key) {
+      const data = PROJECTS[key];
+      if (!data) return;
+
+      // Sincroniza abas da coluna esquerda
+      projectTabs.forEach((t) => t.classList.toggle("is-active", t.dataset.project === key));
+
+      // Sincroniza luas do carrossel 3D
+      document.querySelectorAll(".moon-card").forEach((m) => {
+        m.classList.toggle("is-selected", m.dataset.project === key);
+      });
+
+      // Atualiza inspetor
+      inspectorVisual.innerHTML = data.visualHtml;
+      inspectorCategory.textContent = data.category;
+      inspectorTitle.textContent = data.title;
+      inspectorDescription.textContent = data.description;
+      inspectorStack.innerHTML = data.stack.map((s) => `<span class="stack-chip">${s}</span>`).join("");
+      inspectorFeatures.innerHTML = data.features.map((f) => `<li>${f}</li>`).join("");
+      inspectorPlatforms.innerHTML = data.platforms.map((p) => `<li>${p}</li>`).join("");
+
+      // Atualiza botão principal de ação do topo do inspetor
+      if (inspectorCtaContainer) {
+        if (data.liveUrl) {
+          inspectorCtaContainer.innerHTML = `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" id="inspectorMainCta">Visitar Site Ao Vivo ↗</a>`;
+        } else {
+          inspectorCtaContainer.innerHTML = `<button type="button" class="btn btn-sm" id="inspectorMainCta" onclick="openDemoModal('${data.title}')">📷 Solicitar Print / Demonstração</button>`;
+        }
+      }
+    };
+
+    projectTabs.forEach((tab) => {
+      tab.addEventListener("click", () => window.selectProject(tab.dataset.project));
+    });
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+
+        let firstVisible = null;
+        projectTabs.forEach((tab) => {
+          const match = filter === "all" || tab.dataset.category === filter;
+          tab.classList.toggle("is-filtered-out", !match);
+          if (match && !firstVisible) firstVisible = tab;
+        });
+
+        if (firstVisible) {
+          window.selectProject(firstVisible.dataset.project);
+        }
+      });
+    });
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+
+        let firstVisible = null;
+        projectTabs.forEach((tab) => {
+          const match = filter === "all" || tab.dataset.category === filter;
+          tab.classList.toggle("is-filtered-out", !match);
+          if (match && !firstVisible) firstVisible = tab;
+        });
+
+        if (firstVisible) {
+          window.selectProject(firstVisible.dataset.project);
+        }
+      });
+    });
+
+    // 5. Laboratório Interativo de Vídeo (Touch + Drag + Slider Scrubber)
+    const labVideo = document.getElementById("labVideo");
+    const videoFrame = document.getElementById("interactiveVideoFrame");
+    const scrubber = document.getElementById("videoScrubber");
+    const timeReadout = document.getElementById("videoTimeReadout");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const videoSwitchBtns = document.querySelectorAll("[data-video-src]");
+
+    if (labVideo) {
+      labVideo.play().catch(() => {});
+
+      labVideo.addEventListener("timeupdate", () => {
+        if (labVideo.duration) {
+          scrubber.value = String((labVideo.currentTime / labVideo.duration) * 100);
+          timeReadout.textContent = `${labVideo.currentTime.toFixed(1)}s / ${labVideo.duration.toFixed(1)}s`;
+        }
+      });
+
+      scrubber?.addEventListener("input", () => {
+        labVideo.pause();
+        if (labVideo.duration) {
+          labVideo.currentTime = (parseFloat(scrubber.value) / 100) * labVideo.duration;
+        }
+      });
+
+      playPauseBtn?.addEventListener("click", () => {
+        if (labVideo.paused) {
+          labVideo.play();
+          playPauseBtn.textContent = "Pausar / Scrub Manual";
+        } else {
+          labVideo.pause();
+          playPauseBtn.textContent = "Reproduzir Loop";
+        }
+      });
+
+      // Touch & Pointer Horizontal Scrubbing inside the video frame
+      let isScrubbing = false;
+      function scrubToClientX(clientX) {
+        if (!labVideo.duration) return;
+        const rect = videoFrame.getBoundingClientRect();
+        const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+        labVideo.pause();
+        labVideo.currentTime = ratio * labVideo.duration;
+        playPauseBtn.textContent = "Reproduzir Loop";
+      }
+
+      videoFrame?.addEventListener("pointerdown", (e) => {
+        isScrubbing = true;
+        scrubToClientX(e.clientX);
+      });
+      window.addEventListener("pointermove", (e) => {
+        if (isScrubbing) scrubToClientX(e.clientX);
+      });
+      window.addEventListener("pointerup", () => {
+        isScrubbing = false;
+      });
+
+      videoSwitchBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          videoSwitchBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+          labVideo.src = btn.dataset.videoSrc;
+          labVideo.poster = btn.dataset.videoPoster;
+          labVideo.play().catch(() => {});
+          playPauseBtn.textContent = "Pausar / Scrub Manual";
+        });
+      });
+    }
+  </script>
+</body>
+</html>
+
