@@ -83,15 +83,18 @@
 
       function updateCardGeometry() {
         const computed = window.getComputedStyle(container);
-        const cardW = parseFloat(computed.getPropertyValue('--carrossel-3d-largura')) || 200;
-        const folga = folgaBase;
+        const isMobile = window.innerWidth <= 640;
+        const cardW = parseFloat(computed.getPropertyValue('--carrossel-3d-largura')) || (isMobile ? 115 : 200);
+        const folga = isMobile ? Math.max(folgaBase, 26) : folgaBase;
 
         // Calcular raio necessário para acomodar N cartões com folga
         // 2 * PI * R >= N * (cardW + folga)
         const containerW = container.getBoundingClientRect().width || 800;
         const minRadius = (totalCards * (cardW + folga)) / (2 * Math.PI);
         // Ajustar raio para caber harmoniosamente na largura do container
-        radius = Math.max(220, Math.min(minRadius, containerW * 0.42));
+        radius = isMobile
+          ? Math.max(170, Math.min(minRadius, containerW * 0.48))
+          : Math.max(220, Math.min(minRadius, containerW * 0.42));
 
         // Ajustar posicionamento base dos cartões
         const step = 360 / totalCards;
@@ -119,8 +122,9 @@
           rotation += velocity;
         }
 
-        // Aplicar inclinação e rotação no palco 3D
-        stage.style.transform = `rotateX(${inclinacaoBase}deg) rotateY(${rotation}deg)`;
+        // Aplicar inclinação e rotação no palco 3D (mais inclinado no mobile para exibir a logo central)
+        const activeInclinacao = window.innerWidth <= 640 ? -18 : inclinacaoBase;
+        stage.style.transform = `rotateX(${activeInclinacao}deg) rotateY(${rotation}deg)`;
 
         // O centro planetário sempre compensa a rotação para encarar a câmera
         if (centroEl) {

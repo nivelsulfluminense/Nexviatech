@@ -325,7 +325,14 @@ a { color: inherit; }
   padding: 1.55rem 1.85rem;
   box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.85);
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
+  touch-action: pan-y;
+}
+
+.stage-band a,
+.stage-band button {
+  pointer-events: auto !important;
+  touch-action: manipulation;
 }
 
 .stage-band h1 {
@@ -1987,22 +1994,65 @@ body:hover .ambient-spotlight {
     line-height: 1.15;
   }
 
-  /* Carrossel 3D Orbital de Luas */
+  /* Carrossel 3D Orbital de Luas (Espaçamento limpo e logo central visível) */
   .portfolio-orbit-showcase {
-    height: 320px;
+    height: auto;
+    min-height: 360px;
     overflow: hidden;
     position: relative;
-    padding: 0;
+    padding: 0.5rem 0 1rem;
   }
   .portfolio-orbit-showcase [data-efeito="carrossel-3d"] {
-    transform: scale(0.68) translateY(-15px);
-    transform-origin: center center;
+    --carrossel-3d-largura: 112px;
+    --carrossel-3d-altura: 78px;
+    height: 310px !important;
+    transform: none;
+  }
+  .planeta-shield {
+    width: 68px;
+    height: 68px;
+  }
+  .planeta-logo-svg {
+    width: 34px;
+    height: 34px;
+  }
+  .planeta-label {
+    font-size: 0.6rem;
+    margin-top: 0.35rem;
+  }
+  .moon-card {
+    padding: 0.45rem 0.55rem;
+    border-radius: 12px;
+  }
+  .moon-badge {
+    font-size: 0.48rem;
+  }
+  .moon-title {
+    font-size: 0.72rem;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .moon-summary {
+    display: none;
+  }
+  .moon-foot {
+    font-size: 0.52rem;
   }
   .orbit-hint {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     padding: 0 1rem;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Barra de rolagem visível no mobile */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--tk-accent);
+    border-radius: 999px;
   }
 
   /* Barra de Filtros em Carrossel Horizontal Deslizável */
