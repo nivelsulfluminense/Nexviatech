@@ -13,6 +13,7 @@
   <script src="./efeitos/borda.js" defer></script>
   <script src="./efeitos/carrossel-3d.js" defer></script>
   <script src="./efeitos/motion-design.js" defer></script>
+  <script src="./efeitos/i18n.js" defer></script>
 </head>
 <body>
   <!-- Floating Glass Header -->
@@ -36,6 +37,33 @@
     </nav>
 
     <div class="header-actions">
+      <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt-BR" title="Português (Brasil)" aria-label="Português do Brasil">
+          <svg viewBox="0 0 24 16" aria-hidden="true">
+            <rect width="24" height="16" rx="2" fill="#009B3A"/>
+            <polygon points="12,2 21,8 12,14 3,8" fill="#FEDF00"/>
+            <circle cx="12" cy="8" r="3.2" fill="#002776"/>
+            <path d="M9.2 7.6 Q12 6.8 14.8 8.4" stroke="#FFF" stroke-width="0.6" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="es" title="Español" aria-label="Español">
+          <svg viewBox="0 0 24 16" aria-hidden="true">
+            <rect width="24" height="16" rx="2" fill="#AA151B"/>
+            <rect y="4" width="24" height="8" fill="#F1BF00"/>
+            <rect x="5" y="5.5" width="3" height="5" rx="0.5" fill="#AA151B"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en-US" title="English (US)" aria-label="English (US)">
+          <svg viewBox="0 0 24 16" aria-hidden="true">
+            <rect width="24" height="16" rx="2" fill="#B22234"/>
+            <path d="M0 2.5h24M0 5.5h24M0 8.5h24M0 11.5h24M0 14.5h24" stroke="#FFF" stroke-width="1.2"/>
+            <rect width="10.5" height="8.5" rx="1" fill="#3C3B6E"/>
+            <circle cx="2.5" cy="2.2" r="0.6" fill="#FFF"/><circle cx="5.2" cy="2.2" r="0.6" fill="#FFF"/><circle cx="8" cy="2.2" r="0.6" fill="#FFF"/>
+            <circle cx="3.8" cy="4.2" r="0.6" fill="#FFF"/><circle cx="6.6" cy="4.2" r="0.6" fill="#FFF"/>
+            <circle cx="2.5" cy="6.2" r="0.6" fill="#FFF"/><circle cx="5.2" cy="6.2" r="0.6" fill="#FFF"/><circle cx="8" cy="6.2" r="0.6" fill="#FFF"/>
+          </svg>
+        </button>
+      </div>
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
         <svg id="themeIconDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"></circle>

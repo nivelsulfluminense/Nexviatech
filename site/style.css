@@ -216,6 +216,52 @@ a { color: inherit; }
   gap: 0.65rem;
 }
 
+/* Language Flag Switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--tk-border);
+  background: var(--tk-surface);
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.62;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-btn svg {
+  width: 20px;
+  height: 14px;
+  border-radius: 3px;
+  display: block;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+.lang-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.lang-btn.is-active {
+  opacity: 1;
+  border-color: var(--tk-accent);
+  background: var(--tk-accent-soft, rgba(59, 130, 246, 0.14));
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+}
+
 /* Theme Switcher Pill */
 .theme-toggle {
   display: inline-flex;
@@ -1777,6 +1823,18 @@ body:hover .ambient-spotlight {
     font-size: 0.74rem;
     min-height: 35px;
   }
+  .lang-switcher {
+    gap: 0.15rem;
+    padding: 0.18rem;
+  }
+  .lang-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .lang-btn svg {
+    width: 17px;
+    height: 12px;
+  }
 
   /* Palco de Vídeo Hero & Bandas de Legenda */
   .stage-band,
@@ -2204,6 +2262,14 @@ body:hover .ambient-spotlight {
   .theme-toggle {
     padding: 0.35rem 0.55rem;
     font-size: 0.7rem;
+  }
+  .lang-btn {
+    width: 22px;
+    height: 22px;
+  }
+  .lang-btn svg {
+    width: 15px;
+    height: 10px;
   }
   .metrics-strip {
     grid-template-columns: 1fr;
