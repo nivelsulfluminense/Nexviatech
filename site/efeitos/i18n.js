@@ -95,15 +95,15 @@
         scenes: ['01 · Núcleo & Datos', '02 · Interfaz & Fluidez', '03 · Escala & Nube']
       },
       company: {
-        eyebrow: 'EMPRESA & CONTACTO DIRECTO',
-        title: 'Hablemos sobre tu <span>próximo software</span>.',
-        lead: 'Atendemos proyectos corporativos a medida, licenciamiento de plataformas y alianzas estratégicas en todo Brasil y el exterior.',
-        cards: [
-          { label: 'RAZÓN SOCIAL', value: 'Nexvia Tech Tecnologia Ltda.' },
-          { label: 'CORREO OFICIAL', value: 'admin@nexviatec.com' },
-          { label: 'MODELO DE ATENCIÓN', value: 'B2B A Medida · Licenciamiento SaaS · Productos B2C' }
-        ],
-        cta: 'Enviar Mensaje al Equipo →'
+        title: 'Hablemos sobre tu <span class="accent-word">próximo software de referencia</span>?',
+        lead: 'Ya sea una aplicación B2C para miles de usuarios, una plataforma SaaS B2B o un sistema técnico de alta complejidad para PC y Web, hablas directamente con quien diseña y escribe el código.',
+        cta1: 'Iniciar Proyecto por Correo →',
+        cta2: 'Llamar: (24) 3025-8700',
+        labels: [
+          'CORREO OFICIAL DE INGENIERÍA Y SOPORTE',
+          'ATENCIÓN COMERCIAL Y TÉCNICA',
+          'SEDE OPERATIVA (VOLTA REDONDA — RJ)'
+        ]
       },
       footer: '© 2026 Nexvia Tech · Ingeniería de Software B2B & B2C · Todos los derechos reservados.',
       footerFull: {
@@ -233,15 +233,15 @@
         scenes: ['01 · Core & Data', '02 · Interface & Fluidity', '03 · Scale & Cloud']
       },
       company: {
-        eyebrow: 'COMPANY & DIRECT CONTACT',
-        title: 'Let’s talk about your <span>next software</span>.',
-        lead: 'We serve custom corporate projects, platform licensing, and strategic partnerships across Brazil and worldwide.',
-        cards: [
-          { label: 'LEGAL ENTITY', value: 'Nexvia Tech Tecnologia Ltda.' },
-          { label: 'OFFICIAL EMAIL', value: 'admin@nexviatec.com' },
-          { label: 'ENGAGEMENT MODEL', value: 'Custom B2B · SaaS Licensing · B2C Products' }
-        ],
-        cta: 'Send Message to Team →'
+        title: 'Let’s build your next <span class="accent-word">benchmark software</span>?',
+        lead: 'Whether it’s a B2C app for thousands of users, a B2B SaaS platform, or a high-complexity technical system for PC and Web, you speak directly with the engineers who design and write the code.',
+        cta1: 'Start Project via Email →',
+        cta2: 'Call: (24) 3025-8700',
+        labels: [
+          'OFFICIAL ENGINEERING & SUPPORT EMAIL',
+          'COMMERCIAL & TECHNICAL SUPPORT',
+          'OPERATIONAL HQ (VOLTA REDONDA — RJ)'
+        ]
       },
       footer: '© 2026 Nexvia Tech · B2B & B2C Software Engineering · All rights reserved.',
       footerFull: {
@@ -299,7 +299,7 @@
     originalPt = {
       title: document.title,
       nav: qa('.nav-links a').map((el) => el.textContent),
-      headerCta: q('.header-actions .btn-primary')?.textContent || '',
+      headerCta: q('.header-actions .btn.btn-sm')?.textContent || '',
       stageBands: qa('.stage-band').map((band) => ({
         kicker: band.querySelector('.band-kicker')?.textContent || '',
         h1: band.querySelector('h1')?.textContent || '',
@@ -355,14 +355,11 @@
         scenes: qa('.lab-scene-btn').map((b) => b.textContent)
       },
       company: {
-        eyebrow: q('#contato .eyebrow')?.textContent || '',
-        title: q('#contato h2')?.innerHTML || '',
-        lead: q('#contato .section-lead')?.textContent || '',
-        cards: qa('.company-card').map((c) => ({
-          label: c.querySelector('.company-label')?.textContent || '',
-          value: c.querySelector('.company-value')?.textContent || ''
-        })),
-        cta: q('#contato .btn-primary')?.textContent || ''
+        title: q('#contato .closing-cta-box h2')?.innerHTML || '',
+        lead: q('#contato .closing-cta-box > div:first-child > p')?.textContent || '',
+        cta1: q('#contato .stage-actions .btn')?.textContent || '',
+        cta2: q('#contato .stage-actions .btn-secondary')?.textContent || '',
+        labels: qa('#contato .contact-item .contact-label').map((el) => el.textContent)
       },
       footer: q('.site-footer p')?.textContent || '',
       footerFull: {
@@ -420,7 +417,7 @@
     qa('.nav-links a').forEach((el, i) => {
       if (data.nav[i]) el.textContent = data.nav[i];
     });
-    const headerCta = q('.header-actions .btn-primary');
+    const headerCta = q('.header-actions .btn.btn-sm');
     if (headerCta && data.headerCta) headerCta.textContent = data.headerCta;
 
     qa('.stage-band').forEach((band, i) => {
@@ -537,21 +534,16 @@
     });
 
     // Company & Contact
-    const compEyebrow = q('#contato .eyebrow');
-    const compTitle = q('#contato h2');
-    const compLead = q('#contato .section-lead');
-    const compCta = q('#contato .btn-primary');
-    if (compEyebrow) compEyebrow.textContent = data.company.eyebrow;
-    if (compTitle) compTitle.innerHTML = data.company.title;
-    if (compLead) compLead.textContent = data.company.lead;
-    if (compCta) compCta.textContent = data.company.cta;
-    qa('.company-card').forEach((card, i) => {
-      const c = data.company.cards[i];
-      if (!c) return;
-      const lbl = card.querySelector('.company-label');
-      const val = card.querySelector('.company-value');
-      if (lbl) lbl.textContent = c.label;
-      if (val) val.textContent = c.value;
+    const compTitle = q('#contato .closing-cta-box h2');
+    const compLead = q('#contato .closing-cta-box > div:first-child > p');
+    const compCta1 = q('#contato .stage-actions .btn');
+    const compCta2 = q('#contato .stage-actions .btn-secondary');
+    if (compTitle && data.company.title) compTitle.innerHTML = data.company.title;
+    if (compLead && data.company.lead) compLead.textContent = data.company.lead;
+    if (compCta1 && data.company.cta1) compCta1.textContent = data.company.cta1;
+    if (compCta2 && data.company.cta2) compCta2.textContent = data.company.cta2;
+    qa('#contato .contact-item .contact-label').forEach((lbl, i) => {
+      if (data.company.labels[i]) lbl.textContent = data.company.labels[i];
     });
 
     // Footer
