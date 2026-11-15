@@ -106,6 +106,33 @@
         cta: 'Enviar Mensaje al Equipo →'
       },
       footer: '© 2026 Nexvia Tech · Ingeniería de Software B2B & B2C · Todos los derechos reservados.',
+      footerFull: {
+        desc: 'Desarrollo y licenciamiento de programas informáticos, aplicaciones móviles, sistemas web y consultoría en Tecnologías de la Información para mercados B2B y B2C.',
+        regTitle: 'Registro Oficial (CNPJ)',
+        locTitle: 'Ubicación y Contacto',
+        addrLabel: 'DIRECCIÓN:',
+        cityLabel: 'CIUDAD / ESTADO:',
+        contactLabel: 'CONTACTO:',
+        govTitle: 'Privacidad, LGPD y Cookies',
+        lgpdNote: 'Tratamiento de datos conforme a la <strong>LGPD (Ley nº 13.709/2018)</strong>. Delegado (DPO): admin@nexviatec.com',
+        privacyBtn: 'Política de Privacidad',
+        cookieBtn: 'Control de Cookies'
+      },
+      legal: {
+        privacyKicker: 'CUMPLIMIENTO LGPD · LEY Nº 13.709/2018',
+        privacyTitle: 'Política de Privacidad y LGPD',
+        privacyBody: '<p><strong>NEXVIA TECNOLOGIA LTDA</strong> (Nexvia Tech) trata los datos personales en estricto cumplimiento de la <strong>Ley General de Protección de Datos (LGPD — Ley nº 13.709/2018)</strong>.</p><p><strong>Finalidad:</strong> Los datos enviados en formularios de contacto o demostración se utilizan exclusivamente para atención técnica, propuestas comerciales B2B/B2C y soporte.</p><p><strong>Derechos del Titular:</strong> Puedes solicitar acceso, corrección, portabilidad o eliminación de tus datos en cualquier momento escribiendo a <strong>admin@nexviatec.com</strong>.</p><p><strong>Seguridad:</strong> No comercializamos datos personales y aplicamos cifrado y control de acceso estricto en todos los entornos.</p>',
+        cookieKicker: 'PREFERENCIAS DE PRIVACIDAD',
+        cookieTitle: 'Control de Cookies',
+        cookieEssTitle: 'Cookies Esenciales',
+        cookieEssDesc: 'Necesarias para el tema (claro/oscuro), idioma y funcionamiento básico.',
+        cookiePerfTitle: 'Rendimiento y Telemetría',
+        cookiePerfDesc: 'Ayuda a medir la fluidez de carga y compatibilidad gráfica.',
+        cookieFuncTitle: 'Preferencias Funcionales',
+        cookieFuncDesc: 'Memoriza filtros del portafolio y estado de la órbita 3D.',
+        cookieReject: 'Solo Esenciales',
+        cookieSave: 'Guardar Preferencias'
+      },
       modal: {
         title: 'Iniciar Proyecto con Nexvia Tech',
         sub: 'Cuéntanos brevemente lo que necesitas construir. Nuestro equipo de ingeniería responderá por correo.',
@@ -217,6 +244,33 @@
         cta: 'Send Message to Team →'
       },
       footer: '© 2026 Nexvia Tech · B2B & B2C Software Engineering · All rights reserved.',
+      footerFull: {
+        desc: 'Development and licensing of computer software, mobile applications, web systems, and Information Technology consulting for B2B and B2C markets.',
+        regTitle: 'Official Registration (CNPJ)',
+        locTitle: 'Location & Contact',
+        addrLabel: 'ADDRESS:',
+        cityLabel: 'CITY / STATE:',
+        contactLabel: 'CONTACT:',
+        govTitle: 'Privacy, LGPD & Cookies',
+        lgpdNote: 'Data processing in compliance with <strong>LGPD (Law No. 13.709/2018)</strong>. Data Protection Officer (DPO): admin@nexviatec.com',
+        privacyBtn: 'Privacy Policy',
+        cookieBtn: 'Cookie Controls'
+      },
+      legal: {
+        privacyKicker: 'LGPD COMPLIANCE · LAW NO. 13.709/2018',
+        privacyTitle: 'Privacy Policy & LGPD',
+        privacyBody: '<p><strong>NEXVIA TECNOLOGIA LTDA</strong> (Nexvia Tech) processes personal data in strict compliance with Brazil’s <strong>General Data Protection Law (LGPD — Law No. 13.709/2018)</strong>.</p><p><strong>Purpose:</strong> Data submitted through contact or demo forms is used exclusively for technical assistance, B2B/B2C commercial proposals, and support.</p><p><strong>Data Subject Rights:</strong> You may request access, correction, portability, or deletion of your data at any time via <strong>admin@nexviatec.com</strong>.</p><p><strong>Security:</strong> We never sell personal data and enforce encryption and strict access control across all environments.</p>',
+        cookieKicker: 'PRIVACY PREFERENCES',
+        cookieTitle: 'Cookie Controls',
+        cookieEssTitle: 'Essential Cookies',
+        cookieEssDesc: 'Required for theme (light/dark), language, and core functionality.',
+        cookiePerfTitle: 'Performance & Telemetry',
+        cookiePerfDesc: 'Helps measure loading fluidity and graphics compatibility.',
+        cookieFuncTitle: 'Functional Preferences',
+        cookieFuncDesc: 'Remembers portfolio filters and 3D orbit state.',
+        cookieReject: 'Essential Only',
+        cookieSave: 'Save Preferences'
+      },
       modal: {
         title: 'Start a Project with Nexvia Tech',
         sub: 'Tell us briefly what you need to build. Our engineering team will reply by email.',
@@ -244,7 +298,7 @@
 
     originalPt = {
       title: document.title,
-      nav: qa('.site-nav a').map((el) => el.textContent),
+      nav: qa('.nav-links a').map((el) => el.textContent),
       headerCta: q('.header-actions .btn-primary')?.textContent || '',
       stageBands: qa('.stage-band').map((band) => ({
         kicker: band.querySelector('.band-kicker')?.textContent || '',
@@ -311,6 +365,12 @@
         cta: q('#contato .btn-primary')?.textContent || ''
       },
       footer: q('.site-footer p')?.textContent || '',
+      footerFull: {
+        desc: q('.site-footer .footer-inner > div:first-child p')?.textContent || '',
+        regTitle: q('.site-footer .footer-inner > div:nth-child(2) h3')?.textContent || '',
+        ...Object.fromEntries(qa('[data-i18n-footer]').map((el) => [el.dataset.i18nFooter, el.innerHTML]))
+      },
+      legal: Object.fromEntries(qa('[data-i18n-legal]').map((el) => [el.dataset.i18nLegal, el.innerHTML])),
       modal: {
         title: q('#demoModal h3')?.textContent || '',
         sub: q('#demoModal .modal-sub')?.textContent || '',
@@ -357,7 +417,7 @@
 
     document.title = data.title;
 
-    qa('.site-nav a').forEach((el, i) => {
+    qa('.nav-links a').forEach((el, i) => {
       if (data.nav[i]) el.textContent = data.nav[i];
     });
     const headerCta = q('.header-actions .btn-primary');
@@ -495,8 +555,22 @@
     });
 
     // Footer
-    const footerP = q('.site-footer p');
-    if (footerP) footerP.textContent = data.footer;
+    const footerP = q('.site-footer .footer-inner > div:first-child p');
+    if (footerP && data.footerFull?.desc) footerP.textContent = data.footerFull.desc;
+    const footerRegTitle = q('.site-footer .footer-inner > div:nth-child(2) h3');
+    if (footerRegTitle && data.footerFull?.regTitle) footerRegTitle.textContent = data.footerFull.regTitle;
+    qa('[data-i18n-footer]').forEach((el) => {
+      const key = el.dataset.i18nFooter;
+      if (data.footerFull && data.footerFull[key] !== undefined) {
+        el.innerHTML = data.footerFull[key];
+      }
+    });
+    qa('[data-i18n-legal]').forEach((el) => {
+      const key = el.dataset.i18nLegal;
+      if (data.legal && data.legal[key] !== undefined) {
+        el.innerHTML = data.legal[key];
+      }
+    });
 
     // Modal
     const mTitle = q('#demoModal h3');

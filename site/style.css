@@ -1586,18 +1586,130 @@ a { color: inherit; }
 
 /* Verified Legal Footer (CNPJ Record) */
 .site-footer {
+  position: relative;
   border-top: 1px solid var(--tk-border);
-  padding: 3.5rem 6vw 4rem;
+  padding: 4rem 6vw 4.5rem;
   margin-top: 3rem;
   background: var(--tk-canvas-alt);
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--tk-accent), var(--tk-accent-2, #8b5cf6), transparent);
+  opacity: 0.75;
 }
 
 .footer-inner {
+  position: relative;
   max-width: 1360px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.25fr 1fr 1fr 1.05fr;
+  gap: 2.2rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+.footer-legal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.footer-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--tk-border);
+  background: var(--tk-surface);
+  color: var(--tk-ink);
+  font-family: var(--tk-font-text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.footer-pill-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--tk-accent);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.18);
+}
+
+.legal-modal-body {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--tk-ink-soft);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.legal-modal-body strong {
+  color: var(--tk-ink);
+}
+
+.cookie-controls-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.cookie-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--tk-border);
+  background: var(--tk-surface);
+  cursor: pointer;
+}
+
+.cookie-row strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--tk-ink);
+}
+
+.cookie-row small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--tk-ink-soft);
+  margin-top: 0.2rem;
+}
+
+.cookie-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--tk-accent);
+  flex-shrink: 0;
+}
+
+.cookie-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
 }
 
 .legal-list {

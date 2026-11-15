@@ -706,16 +706,111 @@
       </div>
 
       <div>
-        <h3 style="font-size:0.95rem;margin-bottom:0.75rem">Localização &amp; Atividades</h3>
+        <h3 style="font-size:0.95rem;margin-bottom:0.75rem" data-i18n-footer="locTitle">Localização &amp; Contato</h3>
         <ul class="legal-list">
-          <li><strong>ENDEREÇO:</strong> Rua Fernando, nº 64, Santo Agostinho</li>
-          <li><strong>MUNICÍPIO / UF:</strong> Volta Redonda — RJ · CEP 27.230-080</li>
-          <li><strong>CNAEs:</strong> 62.03-1-00 · 62.01-5-01 · 62.02-3-00 · 62.04-0-00 · 62.09-1-00</li>
-          <li><strong>CONTATO:</strong> admin@nexviatec.com · (24) 3025-8700</li>
+          <li><strong data-i18n-footer="addrLabel">ENDEREÇO:</strong> Rua Fernando, nº 64, Santo Agostinho</li>
+          <li><strong data-i18n-footer="cityLabel">MUNICÍPIO / UF:</strong> Volta Redonda — RJ · CEP 27.230-080</li>
+          <li><strong data-i18n-footer="contactLabel">CONTATO:</strong> admin@nexviatec.com · (24) 3025-8700</li>
         </ul>
+      </div>
+
+      <div>
+        <h3 style="font-size:0.95rem;margin-bottom:0.75rem" data-i18n-footer="govTitle">Privacidade, LGPD &amp; Cookies</h3>
+        <ul class="legal-list footer-gov-list">
+          <li data-i18n-footer="lgpdNote">Tratamento de dados em conformidade com a <strong>LGPD (Lei nº 13.709/2018)</strong>. Encarregado (DPO): admin@nexviatec.com</li>
+        </ul>
+        <div class="footer-legal-actions">
+          <button type="button" class="footer-pill-btn" id="openPrivacyBtn" data-i18n-footer="privacyBtn">Política de Privacidade</button>
+          <button type="button" class="footer-pill-btn" id="openCookieBtn" data-i18n-footer="cookieBtn">Controle de Cookies</button>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Modal: Política de Privacidade & LGPD -->
+  <dialog id="privacyModal" class="demo-dialog" aria-labelledby="privacyDialogTitle">
+    <div class="demo-header">
+      <div>
+        <span class="cap-code" data-i18n-legal="privacyKicker">CONFORMIDADE LGPD · LEI Nº 13.709/2018</span>
+        <h3 id="privacyDialogTitle" data-i18n-legal="privacyTitle">Política de Privacidade &amp; LGPD</h3>
+      </div>
+      <button type="button" class="demo-close-btn" id="privacyCloseBtn" aria-label="Fechar">×</button>
+    </div>
+    <div class="legal-modal-body" data-i18n-legal="privacyBody">
+      <p>A <strong>NEXVIA TECNOLOGIA LTDA</strong> (Nexvia Tech) trata dados pessoais em estrita conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>.</p>
+      <p><strong>Finalidade:</strong> Os dados fornecidos em formulários de contato ou demonstração são utilizados exclusivamente para atendimento técnico, propostas comerciais B2B/B2C e suporte.</p>
+      <p><strong>Direitos do Titular:</strong> Você pode solicitar acesso, correção, portabilidade ou eliminação de seus dados a qualquer momento pelo e-mail <strong>admin@nexviatec.com</strong>.</p>
+      <p><strong>Segurança:</strong> Não comercializamos dados pessoais e aplicamos criptografia e controle de acesso rigoroso em todos os ambientes.</p>
+    </div>
+  </dialog>
+
+  <!-- Modal: Controle de Cookies -->
+  <dialog id="cookieModal" class="demo-dialog" aria-labelledby="cookieDialogTitle">
+    <div class="demo-header">
+      <div>
+        <span class="cap-code" data-i18n-legal="cookieKicker">PREFERÊNCIAS DE PRIVACIDADE</span>
+        <h3 id="cookieDialogTitle" data-i18n-legal="cookieTitle">Controle de Cookies</h3>
+      </div>
+      <button type="button" class="demo-close-btn" id="cookieCloseBtn" aria-label="Fechar">×</button>
+    </div>
+    <div class="cookie-controls-list">
+      <label class="cookie-row">
+        <div>
+          <strong data-i18n-legal="cookieEssTitle">Cookies Essenciais</strong>
+          <small data-i18n-legal="cookieEssDesc">Necessários para tema (claro/escuro), idioma e funcionamento básico.</small>
+        </div>
+        <input type="checkbox" checked disabled />
+      </label>
+      <label class="cookie-row">
+        <div>
+          <strong data-i18n-legal="cookiePerfTitle">Desempenho &amp; Telemetria</strong>
+          <small data-i18n-legal="cookiePerfDesc">Ajuda a medir fluidez de carregamento e compatibilidade gráfica.</small>
+        </div>
+        <input type="checkbox" id="cookiePerfToggle" />
+      </label>
+      <label class="cookie-row">
+        <div>
+          <strong data-i18n-legal="cookieFuncTitle">Preferências Funcionais</strong>
+          <small data-i18n-legal="cookieFuncDesc">Memoriza filtros do portfólio e estado da órbita 3D.</small>
+        </div>
+        <input type="checkbox" id="cookieFuncToggle" checked />
+      </label>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-ghost btn-sm" id="cookieRejectBtn" data-i18n-legal="cookieReject">Apenas Essenciais</button>
+      <button type="button" class="btn btn-primary btn-sm" id="cookieSaveBtn" data-i18n-legal="cookieSave">Salvar Preferências</button>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const pModal = document.getElementById('privacyModal');
+      const cModal = document.getElementById('cookieModal');
+      document.getElementById('openPrivacyBtn')?.addEventListener('click', () => pModal?.showModal());
+      document.getElementById('privacyCloseBtn')?.addEventListener('click', () => pModal?.close());
+      document.getElementById('openCookieBtn')?.addEventListener('click', () => {
+        try {
+          const saved = JSON.parse(localStorage.getItem('nexvia-cookies') || '{}');
+          if (typeof saved.perf === 'boolean') document.getElementById('cookiePerfToggle').checked = saved.perf;
+          if (typeof saved.func === 'boolean') document.getElementById('cookieFuncToggle').checked = saved.func;
+        } catch (_) {}
+        cModal?.showModal();
+      });
+      document.getElementById('cookieCloseBtn')?.addEventListener('click', () => cModal?.close());
+      document.getElementById('cookieRejectBtn')?.addEventListener('click', () => {
+        document.getElementById('cookiePerfToggle').checked = false;
+        document.getElementById('cookieFuncToggle').checked = false;
+        localStorage.setItem('nexvia-cookies', JSON.stringify({ perf: false, func: false }));
+        cModal?.close();
+      });
+      document.getElementById('cookieSaveBtn')?.addEventListener('click', () => {
+        const perf = !!document.getElementById('cookiePerfToggle')?.checked;
+        const func = !!document.getElementById('cookieFuncToggle')?.checked;
+        localStorage.setItem('nexvia-cookies', JSON.stringify({ perf, func }));
+        cModal?.close();
+      });
+    })();
+  </script>
 
   <!-- Modal Acessível: Solicitar Demonstração / Print da Tela Principal -->
   <dialog id="demoModal" class="demo-dialog" aria-labelledby="demoDialogTitle">
