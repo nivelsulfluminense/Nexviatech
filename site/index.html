@@ -882,6 +882,12 @@
         onStatus: (status) => {
           if (status === "error" && heroSection) {
             heroSection.dataset.tkFallback = "1";
+            const firstBand = heroSection.querySelector("[data-tk-band]");
+            if (firstBand) {
+              firstBand.style.opacity = "1";
+              firstBand.style.visibility = "visible";
+              firstBand.removeAttribute("inert");
+            }
           }
         },
         onUpdate: (state) => {
@@ -906,6 +912,15 @@
       });
     } catch (err) {
       console.error("Falha ao inicializar ScrollStage:", err);
+      if (heroSection) {
+        heroSection.dataset.tkFallback = "1";
+        const firstBand = heroSection.querySelector("[data-tk-band]");
+        if (firstBand) {
+          firstBand.style.opacity = "1";
+          firstBand.style.visibility = "visible";
+          firstBand.removeAttribute("inert");
+        }
+      }
     }
 
     // Garante que a navegação por teclado (Tab) posicione o elemento em foco imediatamente na tela

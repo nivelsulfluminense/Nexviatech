@@ -2432,6 +2432,14 @@ body:hover .ambient-spotlight {
   }
 }
 
+/* Fallback garantido para PCs sem GPU / WebGL / erro no ScrollStage */
+[data-tk-fallback="1"] .stage-band:first-of-type,
+[data-tk-status="error"] .stage-band:first-of-type {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
