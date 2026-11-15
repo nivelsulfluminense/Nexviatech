@@ -783,11 +783,19 @@
           { frames: framesFromManifest(lg, "./film/lg") },
         ],
         smooth: 0.10,
+        maxDpr: 1.5,
+        onStatus: (status) => {
+          if (status === "error" && heroSection) {
+            heroSection.dataset.tkFallback = "1";
+          }
+        },
         onUpdate: (state) => {
           if (hudText) {
             const f = String((state.frame ?? 0) + 1).padStart(3, "0");
             const pct = Math.round((state.progress ?? 0) * 100);
-            hudText.textContent = `SCROLL / TOUCH TIMELINE · QUADRO ${f} / 179 (${pct}%)`;
+            const lang = document.documentElement.lang || "pt-BR";
+            const frameWord = lang === "es" ? "CUADRO" : lang === "en-US" ? "FRAME" : "QUADRO";
+            hudText.textContent = `SCROLL / TOUCH TIMELINE · ${frameWord} ${f} / 179 (${pct}%)`;
           }
           heroSection.querySelectorAll("[data-tk-band]").forEach((band) => {
             const op = parseFloat(band.style.opacity || "0");
